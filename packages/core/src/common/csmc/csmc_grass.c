@@ -49,7 +49,7 @@ static int csmcGrassId(s16 gi, int def)
 
     if (gi == 0)
         return def;
-    if (!csmcEnabled())
+    if (!csmcEnabledGrassPot())
         return CSMC_GRASS_MAJOR;
 
     csmcId = csmcFromItem(gi);

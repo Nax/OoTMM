@@ -340,9 +340,21 @@ export async function applyRandomSettings(rnd: OptionRandomSettings, oldSettings
 
   base.sunSongMm = booleanWeighted(random, 0.5);
   base.elegyOot = booleanWeighted(random, 0.5);
+
+  /* CAMC settings */
   base.csmc = sampleWeighted(random, { always: 18, agony: 1, never: 1 });
   if (base.csmc !== 'never') {
     base.csmcHearts = booleanWeighted(random, 0.75);
+  }
+  switch (randomInt(random, 4)) {
+  case 0:
+  base.csmcGrassPot = false;
+    break;
+  case 1:
+  base.csmcGrassPot = true;
+    break;
+  default:
+    base.csmcGrassPot = booleanWeighted(random, 0.5);
   }
 
   /* Ageless items - 50% disabled, 10% enabled, 40% individual */

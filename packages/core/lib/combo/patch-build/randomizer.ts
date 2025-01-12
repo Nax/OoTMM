@@ -796,6 +796,7 @@ function worldConfig(world: World, settings: Settings): Set<Confvar> {
     CSMC: settings.csmc === 'always',
     CSMC_SKULLTULA: settings.csmcSkulltula,
     CSMC_COW: settings.csmcCow,
+    CSMC_GRASS_POT: settings.csmcGrassPot,
     CSMC_AGONY: settings.csmc === 'agony',
     OOT_PROGRESSIVE_SHIELDS: settings.progressiveShieldsOot === 'progressive',
     OOT_PROGRESSIVE_SWORDS: settings.progressiveSwordsOot === 'progressive',
