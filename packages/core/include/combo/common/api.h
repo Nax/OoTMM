@@ -470,6 +470,7 @@ s32 Entrance_GetSceneIdAbsolute(u16 entrance);
 /* SysFlashrom */
 s32 SysFlashrom_IsInit(void);
 s32 SysFlashrom_InitFlash(void);
+s32 SysFlashrom_EraseSector(u32 page);
 s32 SysFlashrom_ReadData(void* addr, u32 pageNum, u32 pageCount);
 s32 SysFlashrom_ExecWrite(void* addr, u32 pageNum, u32 pageCount);
 

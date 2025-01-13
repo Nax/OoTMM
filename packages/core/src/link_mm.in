@@ -75,6 +75,7 @@ osFlashReadArray = 0x8018752c;
 SysFlashrom_IsInit = 0x801857c0;
 SysFlashrom_InitFlash = 0x80185908;
 SysFlashrom_ReadData = 0x80185968;
+SysFlashrom_EraseSector = 0x801859F0;
 SysFlashrom_ExecWrite = 0x80185a2c;
 
 gCartHandle = 0x80096b40;

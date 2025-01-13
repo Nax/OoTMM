@@ -108,6 +108,36 @@ void osFlashClearStatus(void)
     osEPiWriteIo(&__osFlashHandler, __osFlashHandler.baseAddress, 0);
 }
 
+s32 osFlashSectorErase(u32 page_num) {
+    u32 status;
+    OSTimer mytimer;
+    OSMesgQueue timerMesgQueue;
+    OSMesg dummy;
+
+    // start sector erase operation
+    osEPiWriteIo(&__osFlashHandler, __osFlashHandler.baseAddress | FLASH_CMD_REG, FLASH_CMD_SECTOR_ERASE | page_num);
+    osEPiWriteIo(&__osFlashHandler, __osFlashHandler.baseAddress | FLASH_CMD_REG, FLASH_CMD_EXECUTE_ERASE);
+
+    // wait for completion by polling erase-busy flag
+    osCreateMesgQueue(&timerMesgQueue, &dummy, 1);
+
+    do {
+        osSetTimer(&mytimer, OS_USEC_TO_CYCLES(12500), 0, &timerMesgQueue, &dummy);
+        osRecvMesg(&timerMesgQueue, &dummy, OS_MESG_BLOCK);
+        osEPiReadIo(&__osFlashHandler, __osFlashHandler.baseAddress, &status);
+    } while ((status & FLASH_STATUS_ERASE_BUSY) == FLASH_STATUS_ERASE_BUSY);
+
+    // check erase operation status, clear status
+    osEPiReadIo(&__osFlashHandler, __osFlashHandler.baseAddress, &status);
+    osFlashClearStatus();
+
+    if (((status & 0xFF) == 8) || ((status & 0xFF) == 0x48) || ((status & 8) == 8)) {
+        return FLASH_STATUS_ERASE_OK;
+    } else {
+        return FLASH_STATUS_ERASE_ERROR;
+    }
+}
+
 s32 osFlashWriteBuffer(OSIoMesg* mb, s32 priority, void* dramAddr, OSMesgQueue* mq)
 {
     osEPiWriteIo(&__osFlashHandler, __osFlashHandler.baseAddress | FLASH_CMD_REG, FLASH_CMD_PAGE_PROGRAM);
@@ -237,12 +267,17 @@ s32 SysFlashrom_ReadData(void* addr, u32 pageNum, u32 pageCount)
     osRecvMesg(&sFlashromMesgQueue, NULL, OS_MESG_BLOCK);
     return 0;
 }
+
+s32 SysFlashrom_EraseSector(u32 page)
+{
+    if (!SysFlashrom_IsInit()) {
+        return -1;
+    }
+    return osFlashSectorErase(page);
+}
 #else
 extern OSMesgQueue  sFlashromMesgQueue;
 #endif
-
-static char sFlashBuffer[FLASH_BLOCK_SIZE] ALIGNED(16);
-static char sFlashBufferReadback[FLASH_BLOCK_SIZE] ALIGNED(16);
 
 static s32 doWrite(void* addr, u32 pageNum, u32 pageCount)
 {
@@ -265,96 +300,85 @@ static s32 doWrite(void* addr, u32 pageNum, u32 pageCount)
     return 0;
 }
 
-static int validateFlashReadback(void* addr, u32 pageNum, u32 pageCount)
-{
-    for (int i = 0; i < pageCount; i++)
-    {
-        SysFlashrom_ReadData(sFlashBufferReadback, pageNum + i, 1);
-        if (memcmp(addr, sFlashBufferReadback, FLASH_BLOCK_SIZE) != 0)
-            return -1;
-        addr = (char*)addr + FLASH_BLOCK_SIZE;
-    }
-
-    return 0;
-}
-
-static int tryWrite(void* addr, u32 pageNum, u32 pageCount)
-{
-    int errors;
-    int ret;
-
-    errors = 0;
-    for (;;)
-    {
-        ret = doWrite(addr, pageNum, pageCount);
-        if (ret == 0 && validateFlashReadback(addr, pageNum, pageCount) == 0)
-            return 0;
-        errors++;
-        if (errors >= 10)
-        {
-            Fault_AddHungupAndCrashImpl("Flash Write Error", "???");
-            return ret;
-        }
-    }
-}
-
 static void writeFlash(u32 devAddr, void* dramAddr, u32 size)
 {
-    u32 misalign;
-    u32 tmp;
-
-    /* Check for misaligned start */
-    misalign = devAddr & FLASH_BLOCK_MASK;
-    if (misalign)
+    if (size == 0)
     {
-        /* Read-edit-write cycle */
-        tmp = FLASH_BLOCK_SIZE - misalign;
-        if (tmp > size)
-            tmp = size;
-        SysFlashrom_ReadData(sFlashBuffer, devAddr / FLASH_BLOCK_SIZE, 1);
-        memcpy(sFlashBuffer + misalign, dramAddr, tmp);
-        tryWrite(sFlashBuffer, devAddr / FLASH_BLOCK_SIZE, 1);
-        devAddr += tmp;
-        dramAddr = ((char*)dramAddr + tmp);
-        size -= tmp;
+        return;
     }
 
-    if (size >= FLASH_BLOCK_SIZE)
+    const int SECTOR_SIZE = 16384;
+    const int PAGES_IN_SECTOR = 128;
+
+    u32 sectorOffset = devAddr % SECTOR_SIZE;
+    int startingSector = (devAddr / FLASH_BLOCK_SIZE) / PAGES_IN_SECTOR;
+    int endingSector = ((devAddr + size - 1) / FLASH_BLOCK_SIZE) / PAGES_IN_SECTOR;
+
+    u8 *unalignedBuffer = malloc(SECTOR_SIZE + 0xF);
+    u8 *buffer = (u8*)ALIGN16((u32)unalignedBuffer);
+
+    if (!unalignedBuffer)
     {
-        if (!((u32)dramAddr & 7))
+        Fault_AddHungupAndCrashImpl("Flash malloc error", "???");
+        return;
+    }
+
+    for (int sector = startingSector; sector <= endingSector; sector++) {
+        u32 sectorPage = sector * PAGES_IN_SECTOR;
+
+        SysFlashrom_ReadData(buffer, sectorPage, PAGES_IN_SECTOR);
+
+        int blockSize = CLAMP_MAX(size, SECTOR_SIZE - sectorOffset);
+
+        int needWrite = FALSE;
+        int needErase = FALSE;
+
+        for (int i = 0; i < blockSize; i++)
         {
-            /* DMA-friendly */
-            tmp = size / FLASH_BLOCK_SIZE;
-            tryWrite(dramAddr, devAddr / FLASH_BLOCK_SIZE, tmp);
-            devAddr += tmp * FLASH_BLOCK_SIZE;
-            dramAddr = ((char*)dramAddr + tmp * FLASH_BLOCK_SIZE);
-            size -= tmp * FLASH_BLOCK_SIZE;
-        }
-        else
-        {
-            /* Non-DMA-friendly */
-            while (size >= FLASH_BLOCK_SIZE)
+            u8 currentValue = buffer[sectorOffset + i];
+            u8 targetValue = ((u8*)dramAddr)[i];
+
+            if (currentValue != targetValue)
             {
-                memcpy(sFlashBuffer, dramAddr, FLASH_BLOCK_SIZE);
-                tryWrite(sFlashBuffer, devAddr / FLASH_BLOCK_SIZE, 1);
-                devAddr += FLASH_BLOCK_SIZE;
-                dramAddr = ((char*)dramAddr + FLASH_BLOCK_SIZE);
-                size -= FLASH_BLOCK_SIZE;
+                needWrite = TRUE;
+                if ((currentValue & targetValue) != targetValue)
+                {
+                    needErase = TRUE;
+                    break;
+                }
             }
         }
+
+        if (needWrite)
+        {
+            memcpy(buffer + sectorOffset, dramAddr, blockSize);
+            
+            if (needErase)
+            {
+                SysFlashrom_EraseSector(sectorPage);
+                doWrite(buffer, sectorPage, PAGES_IN_SECTOR);
+            }
+            else
+            {
+                u32 bufferOffset = sectorOffset & (~FLASH_BLOCK_MASK);
+                u32 startingPage = sectorPage + (sectorOffset / FLASH_BLOCK_SIZE);
+                u32 endingPage = sectorPage + ((sectorOffset + blockSize - 1) / FLASH_BLOCK_SIZE);
+                u32 pageCount = endingPage - startingPage + 1;
+                doWrite(buffer + bufferOffset, startingPage, pageCount);
+            }
+        }
+
+        dramAddr += blockSize;
+        size -= blockSize;
+        sectorOffset = 0;
     }
 
-    /* Misaligned end */
-    if (size)
-    {
-        SysFlashrom_ReadData(sFlashBuffer, devAddr / FLASH_BLOCK_SIZE, 1);
-        memcpy(sFlashBuffer, dramAddr, size);
-        tryWrite(sFlashBuffer, devAddr / FLASH_BLOCK_SIZE, 1);
-    }
+    free(unalignedBuffer);
 }
 
 static void readFlash(u32 devAddr, void* dramAddr, u32 size)
 {
+    char flashBuffer[FLASH_BLOCK_SIZE] ALIGNED(16);
     u32 misalign;
     u32 tmp;
 
@@ -365,8 +389,8 @@ static void readFlash(u32 devAddr, void* dramAddr, u32 size)
         tmp = FLASH_BLOCK_SIZE - misalign;
         if (tmp > size)
             tmp = size;
-        SysFlashrom_ReadData(sFlashBuffer, devAddr / FLASH_BLOCK_SIZE, 1);
-        memcpy(dramAddr, sFlashBuffer + misalign, tmp);
+        SysFlashrom_ReadData(flashBuffer, devAddr / FLASH_BLOCK_SIZE, 1);
+        memcpy(dramAddr, flashBuffer + misalign, tmp);
         devAddr += tmp;
         dramAddr = ((char*)dramAddr + tmp);
         size -= tmp;
@@ -390,8 +414,8 @@ static void readFlash(u32 devAddr, void* dramAddr, u32 size)
             /* Non-DMA-friendly */
             while (size >= FLASH_BLOCK_SIZE)
             {
-                SysFlashrom_ReadData(sFlashBuffer, devAddr / FLASH_BLOCK_SIZE, 1);
-                memcpy(dramAddr, sFlashBuffer, FLASH_BLOCK_SIZE);
+                SysFlashrom_ReadData(flashBuffer, devAddr / FLASH_BLOCK_SIZE, 1);
+                memcpy(dramAddr, flashBuffer, FLASH_BLOCK_SIZE);
                 devAddr += FLASH_BLOCK_SIZE;
                 dramAddr = ((char*)dramAddr + FLASH_BLOCK_SIZE);
                 size -= FLASH_BLOCK_SIZE;
@@ -402,8 +426,8 @@ static void readFlash(u32 devAddr, void* dramAddr, u32 size)
     /* Check for misaligned end */
     if (size)
     {
-        SysFlashrom_ReadData(sFlashBuffer, devAddr / FLASH_BLOCK_SIZE, 1);
-        memcpy(dramAddr, sFlashBuffer, size);
+        SysFlashrom_ReadData(flashBuffer, devAddr / FLASH_BLOCK_SIZE, 1);
+        memcpy(dramAddr, flashBuffer, size);
     }
 }
 
