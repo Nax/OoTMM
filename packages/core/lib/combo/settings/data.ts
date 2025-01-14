@@ -115,7 +115,7 @@ export const SETTINGS = [{
   description: 'The guarantees you have regarding reachability of locations.',
   values: [
     { value: 'allLocations', name: 'All Locations', description: 'Every location in the game can be reached. The seed can always be completed.' },
-    { value: 'beatable', name: 'Beatable Only', description: 'Some items can be placed in locations that are never reacheable. The seed can always be completed.' },
+    { value: 'beatable', name: 'Beatable Only', description: 'Some items can be placed in locations that are never reachable. The seed can always be completed.' },
     { value: 'none', name: 'No Logic', description: 'Items are placed completely at random. The seed might be unbeatable.' },
   ],
   default: 'allLocations'
@@ -159,7 +159,7 @@ export const SETTINGS = [{
   name: 'Extra Hint Regions',
   category: 'hints',
   type: 'boolean',
-  description: 'Make the region hints more granular: Makes Goron Racetrack and Butler Race into their own regions, and splits Ganon Castle/Tower and Normal/Inverted Stone Tower Temple.',
+  description: 'Make the region hints more granular: Makes Goron Racetrack and Butler Race into their own regions, and splits Ganon\'s Castle/Tower and Normal/Inverted Stone Tower Temple.',
   default: false
 }, {
   key: 'hintPathDungeons',
@@ -271,8 +271,8 @@ export const SETTINGS = [{
   values: [
     { value: 'ownDungeon', name: 'Own Dungeon', description: 'Dungeon Small Keys can only be found in their own dungeons' },
     { value: 'anywhere', name: 'Anywhere', description: 'Dungeon Small Keys can be found anywhere' },
-    { value: 'removed', name: 'Removed', description: 'Small keys are removed and small key doors are unlocked' },
-    { value: 'vanilla', name: 'Vanilla', description: 'Dungeon small keys are placed in their original chests', cond: (s: any) => s.smallKeyRingOot.type === 'none' },
+    { value: 'removed', name: 'Removed', description: 'Small Keys are removed and Small Key doors are unlocked' },
+    { value: 'vanilla', name: 'Vanilla', description: 'Dungeon Small Keys are placed in their original chests', cond: (s: any) => s.smallKeyRingOot.type === 'none' },
   ],
   cond: hasOoT,
   default: 'ownDungeon'
@@ -285,8 +285,8 @@ export const SETTINGS = [{
   values: [
     { value: 'ownDungeon', name: 'Own Dungeon', description: 'Dungeon Small Keys can only be found in their own dungeons' },
     { value: 'anywhere', name: 'Anywhere', description: 'Dungeon Small Keys can be found anywhere' },
-    { value: 'removed', name: 'Removed', description: 'Small keys are removed and small key doors are unlocked' },
-    { value: 'vanilla', name: 'Vanilla', description: 'Dungeon small keys are placed in their original chests', cond: (s: any) => s.smallKeyRingMm.type === 'none' },
+    { value: 'removed', name: 'Removed', description: 'Small Keys are removed and Small Key doors are unlocked' },
+    { value: 'vanilla', name: 'Vanilla', description: 'Dungeon Small Keys are placed in their original chests', cond: (s: any) => s.smallKeyRingMm.type === 'none' },
   ],
   cond: hasMM,
   default: 'ownDungeon'
@@ -414,12 +414,12 @@ export const SETTINGS = [{
     { value: 'GTG_Slopes', name: 'GTG (Slopes)' },
     { value: 'GTG_Lava', name: 'GTG (Lava)' },
     { value: 'GTG_Water', name: 'GTG (Water)' },
-    { value: 'Ganon_Light', name: 'Ganon (Light)' },
-    { value: 'Ganon_Forest', name: 'Ganon (Forest)' },
-    { value: 'Ganon_Fire', name: 'Ganon (Fire)' },
-    { value: 'Ganon_Water', name: 'Ganon (Water)' },
-    { value: 'Ganon_Shadow', name: 'Ganon (Shadow)' },
-    { value: 'Ganon_Spirit', name: 'Ganon (Spirit)' },
+    { value: 'Ganon_Light', name: 'Ganon\'s Castle (Light)' },
+    { value: 'Ganon_Forest', name: 'Ganon\'s Castle (Forest)' },
+    { value: 'Ganon_Fire', name: 'Ganon\'s Castle (Fire)' },
+    { value: 'Ganon_Water', name: 'Ganon\'s Castle (Water)' },
+    { value: 'Ganon_Shadow', name: 'Ganon\'s Castle (Shadow)' },
+    { value: 'Ganon_Spirit', name: 'Ganon\'s Castle (Spirit)' },
   ],
   default: 'none',
   cond: (s: any) => hasOoT(s) && s.silverRupeeShuffle !== 'vanilla',
@@ -513,7 +513,7 @@ export const SETTINGS = [{
   name: 'Cow Shuffle (OoT)',
   category: 'main.shuffle',
   type: 'boolean',
-  description: 'Controls whether or not playing Epona\'s Song near cows will give an item (OOT)',
+  description: 'Controls whether or not playing Epona\'s Song near cows will give an item (OoT)',
   cond: hasOoT,
   default: false
 }, {
@@ -529,7 +529,7 @@ export const SETTINGS = [{
   name: 'Shop Shuffle (OoT)',
   category: 'main.shuffle',
   type: 'enum',
-  description: 'Controls whether or not shops in OOT should have their items shuffled',
+  description: 'Controls whether or not shops in OoT should have their items shuffled',
   values: [
     { value: 'none', name: 'None', description: 'All the items are vanilla' },
     { value: 'full', name: 'Full', description: 'All 8 items are shuffled' },
@@ -553,10 +553,10 @@ export const SETTINGS = [{
   name: 'Owl Statue Shuffle',
   category: 'main.shuffle',
   type: 'enum',
-  description: 'Make owl statue items that can be shuffled.',
+  description: 'Make Owl Statues items that can be shuffled.',
   values: [
-    { value: 'none', name: 'None', description: 'Owl statues are vanilla' },
-    { value: 'anywhere', name: 'Anywhere', description: 'Owl statues are shuffled in the item pool' },
+    { value: 'none', name: 'None', description: 'Owl Statues are vanilla' },
+    { value: 'anywhere', name: 'Anywhere', description: 'Owl Statues are shuffled in the item pool' },
   ],
   cond: hasMM,
   default: 'none'
@@ -679,7 +679,7 @@ export const SETTINGS = [{
   name: 'Termina Field Grass Shuffle (MM)',
   category: 'main.shuffle',
   type: 'boolean',
-  description: 'Controls whether or not the Termina Field (grottos do not count towards this) grass is shuffled (MM)',
+  description: 'Controls whether or not the Termina Field grass is shuffled (MM). Grottos do not count towards this',
   cond: (s: any) => hasMM(s) && (s.shuffleGrassMm === 'overworld' || s.shuffleGrassMm === 'all'),
   default: false
 }, {
@@ -873,9 +873,9 @@ export const SETTINGS = [{
   cond: hasOoT,
   default: false
 },
-{ ...SETTING_PRICE, key: 'priceOotShops', name: 'OoT Shops Prices', description: 'Sets the price of items inside OoT shops', cond: hasOoT },
-{ ...SETTING_PRICE, key: 'priceOotScrubs', name: 'OoT Scrubs Prices', description: 'Sets the price of items sold by OoT scrubs', cond: hasOoT },
-{ ...SETTING_PRICE, key: 'priceMmShops', name: 'MM Shops Prices', description: 'Sets the price of items sold inside MM shops', cond: hasMM },
+{ ...SETTING_PRICE, key: 'priceOotShops', name: 'OoT Shop Prices', description: 'Sets the price of items inside OoT shops', cond: hasOoT },
+{ ...SETTING_PRICE, key: 'priceOotScrubs', name: 'OoT Scrub Prices', description: 'Sets the price of items sold by OoT scrubs', cond: hasOoT },
+{ ...SETTING_PRICE, key: 'priceMmShops', name: 'MM Shop Prices', description: 'Sets the price of items sold inside MM shops', cond: hasMM },
 { ...SETTING_PRICE, key: 'priceMmTingle', name: 'MM Tingle Prices', description: 'Sets the price of items sold by Tingle', cond: hasMM },
 {
   key: 'ganonTrials',
@@ -912,18 +912,18 @@ export const SETTINGS = [{
   type: 'enum',
   description: 'Choose the starting age',
   values: [
-    { value: 'child', name:  'Child',  description: 'Link will start off as child' },
-    { value: 'adult', name:  'Adult',  description: 'Link will start off as adult' },
-    { value: 'random', name: 'Random', description: 'Link will start off as either adult or child, with a 50/50 probability' },
+    { value: 'child', name:  'Child',  description: 'Link will start off as Child' },
+    { value: 'adult', name:  'Adult',  description: 'Link will start off as Adult' },
+    { value: 'random', name: 'Random', description: 'Link will start off as either Adult or Child, with a 50/50 probability' },
   ],
   cond: hasOoT,
   default: 'child'
 }, {
   key: 'swordlessAdult',
-  name: 'Allow adult link to be swordless',
+  name: 'Allow Adult Link to be swordless',
   category: 'main.events',
   type: 'boolean',
-  description: 'Choose whether or not adult Link can be swordless',
+  description: 'Choose whether or not Adult Link can be swordless',
   cond: hasOoT,
   default: false
 }, {
@@ -964,10 +964,10 @@ export const SETTINGS = [{
   name: 'Deku Tree',
   category: 'main.events',
   type: 'enum',
-  description: 'Controls the behavior of Mido blocking the Deku Tree as child',
+  description: 'Controls the behavior of Mido blocking the Deku Tree as Child',
   values: [
     { value: 'closed', name: 'Closed', description: 'Mido will block the way to the Deku Tree until you have a Deku Shield and the Kokiri Sword.' },
-    { value: 'vanilla', name: 'Vanilla', description: 'Mido will block the way to the Deku Tree, but the tree itself will be open as child.' },
+    { value: 'vanilla', name: 'Vanilla', description: 'Mido will block the way to the Deku Tree, but the tree itself will be open as Child.' },
     { value: 'open', name: 'Open', description: 'Mido will not block the way, the Deku Tree will be open from the start' },
   ],
   default: 'open',
@@ -1009,7 +1009,7 @@ export const SETTINGS = [{
   name: 'Clear State Dungeons (MM)',
   category: 'main.events',
   type: 'enum',
-  description: 'Controls whether or not MM dungeons will need their respectives songs in the cleared state',
+  description: 'Controls whether or not MM dungeons will need their respective songs in the cleared state',
   values: [
     { value: 'none', name: 'None' },
     { value: 'WF', name: 'Woodfall Temple' },
@@ -1023,10 +1023,10 @@ export const SETTINGS = [{
   name: 'Beneath the Well behavior (MM)',
   category: 'main.events',
   type: 'enum',
-  description: 'Controls which MM dungeons have ',
+  description: 'Controls the behavior of the Gibdos in Beneath the Well',
   values: [
     { value: 'vanilla', name: 'Vanilla', description: 'Nothing changes, Gibdos are back once you reset the cycle.' },
-    { value: 'remorseless', name: 'Remorseless', description: 'Once you gave a Gibdo its item, it is permanently gone, also affects the ending ladder and the sun block.' },
+    { value: 'remorseless', name: 'Remorseless', description: 'Once you\'ve given a Gibdo its item, it is permanently gone, also affects the ending ladder and the sun block.' },
     { value: 'open', name: 'Open', description: 'All the Gibdos are already gone, also applies to the ending ladder and the sun block.' }
   ],
   default: 'vanilla',
@@ -1036,7 +1036,7 @@ export const SETTINGS = [{
   name: 'Kakariko Gate',
   category: 'main.events',
   type: 'enum',
-  description: 'Controls the behavior of the gate in Kakariko blocking Death Mountain as child',
+  description: 'Controls the behavior of the gate in Kakariko blocking Death Mountain as Child',
   values: [
     { value: 'closed', name: 'Closed', description: 'The gate will be closed until you show Zelda\'s Letter to the guard' },
     { value: 'open', name: 'Open', description: 'The gate will be open from the start' },
@@ -1048,7 +1048,7 @@ export const SETTINGS = [{
   name: 'Open Zora\'s Domain Shortcut',
   category: 'main.events',
   type: 'boolean',
-  description: 'Removes the ice blocking Zora\'s Domain in Lake Hylia as adult',
+  description: 'Removes the ice blocking Zora\'s Domain in Lake Hylia as Adult',
   default: false,
   cond: hasOoT,
 }, {
@@ -1073,7 +1073,7 @@ export const SETTINGS = [{
   values: [
     { value: 'vanilla', name: 'Vanilla', description: 'You will need to rescue all carpenters.' },
     { value: 'single', name: 'One Carpenter', description: 'You will need to rescue only one carpenter.' },
-    { value: 'open', name: 'Open', description: 'Carpenters are rescued from the start and the bridge in Gerudo Valley as adult is repaired.' },
+    { value: 'open', name: 'Open', description: 'Carpenters are rescued from the start and the bridge in Gerudo Valley as Adult is repaired.' },
   ],
   default: 'vanilla',
   cond: hasOoT,
@@ -1082,7 +1082,7 @@ export const SETTINGS = [{
   name: 'Skip Child Zelda',
   category: 'main.events',
   type: 'boolean',
-  description: 'This changes the beginning of the child trade quest. True means you\'ll start having already met Zelda and got her item along with the one from Impa. The Chicken is also removed from the game, but Malon will still be at Hyrule Castle',
+  description: 'This changes the beginning of the Child trade quest. True means you\'ll start having already met Zelda and got her item along with the one from Impa. The Chicken is also removed from the game, but Malon will still be at Hyrule Castle',
   default: false,
   cond: hasOoT,
 }, {
@@ -1139,7 +1139,7 @@ export const SETTINGS = [{
   description: 'Controls the behavior of the MM Boss Warp Pads.',
   values: [
     { value: 'bossBeaten', name: 'Boss Beaten', description: 'Enabled when the boss is beaten' },
-    { value: 'remains', name: 'Remains', description: 'Enabled when the matching remain is obtained' },
+    { value: 'remains', name: 'Remains', description: 'Enabled when the matching remains are obtained' },
   ],
   default: 'bossBeaten',
   cond: hasMM,
@@ -1197,7 +1197,7 @@ export const SETTINGS = [{
   type: 'number',
   min: 0,
   max: 12,
-  description: 'How many major dungeons sould be pre-completed. Can be combined with other pre-completed dungeon rules.',
+  description: 'How many major dungeons should be pre-completed. Can be combined with other pre-completed dungeon rules.',
   default: 0,
   cond: (s: any) => s.preCompletedDungeons,
 }, {
@@ -1227,7 +1227,7 @@ export const SETTINGS = [{
   type: 'number',
   min: 0,
   max: 4,
-  description: 'Pre-completes dungeons containing at least one remain, until in reaches that many remains. Can be combined with other pre-completed dungeon rules.',
+  description: 'Pre-completes dungeons containing at least one of the remains, until in reaches that many remains. Can be combined with other pre-completed dungeon rules.',
   default: 0,
   cond: (s: any) => hasMM(s) && s.preCompletedDungeons,
 }, {
@@ -1240,7 +1240,7 @@ export const SETTINGS = [{
   cond: hasOoTMM,
 }, {
   key: 'ootPreplantedBeans',
-  name: 'Pre-Planted beans (OoT)',
+  name: 'Pre-Planted Beans (OoT)',
   category: 'main.events',
   type: 'boolean',
   description: 'Automatically plants beans in the various soft soils of OoT, as well as removing the beans from the item pool',
@@ -1251,7 +1251,7 @@ export const SETTINGS = [{
   name: 'Pre-Activated Owl Statues',
   category: 'main.events',
   type: 'set',
-  description: 'Automatically activates owl statues on your behalf, and you will also get the items at their location',
+  description: 'Automatically activates Owl Statues on your behalf, and you will also get the items at their location',
   values: [
     { value: 'clocktown', name: 'Clock Town' },
     { value: 'milkroad',  name: 'Milk Road' },
@@ -1279,7 +1279,7 @@ export const SETTINGS = [{
   name: 'Cross-Games OoT Warp Songs',
   category: 'main.cross',
   type: 'boolean',
-  description: 'Allows you to play OOT Warp Songs from MM to warp to their respective locations. Logic could even expect you to do so',
+  description: 'Allows you to play OoT Warp Songs from MM to warp to their respective locations. Logic could even expect you to do so',
   default: false,
   cond: hasOoTMM,
 }, {
@@ -1287,11 +1287,11 @@ export const SETTINGS = [{
   name: 'Cross-Games MM Song of Soaring',
   category: 'main.cross',
   type: 'enum',
-  description: 'Controls whether you can play Song of Soaring from OOT to warp to MM Owl Statues and how logic should be affected',
+  description: 'Controls whether you can play Song of Soaring from OoT to warp to MM Owl Statues and how logic should be affected',
   values: [
-    { value: 'none', name: 'None', description: 'Song of Soaring is fully disabled in OOT' },
-    { value: 'childOnly', name: 'Child Only', description: 'Song of Soaring in OOT is enabled and logical only for Child' },
-    { value: 'full', name: 'Child & Adult', description: 'Song of Soaring in OOT is enabled and logical for both Child and Adult' },
+    { value: 'none', name: 'None', description: 'Song of Soaring is fully disabled in OoT' },
+    { value: 'childOnly', name: 'Child Only', description: 'Song of Soaring in OoT is enabled and logical only for Child' },
+    { value: 'full', name: 'Child & Adult', description: 'Song of Soaring in OoT is enabled and logical for both Child and Adult' },
   ],
   default: 'none',
   cond: hasOoTMM,
@@ -1300,7 +1300,7 @@ export const SETTINGS = [{
   name: 'Cross-Games Farore\'s Wind',
   category: 'main.cross',
   type: 'boolean',
-  description: 'Controls whether you can use Farore\'s Wind to warp between OOT and MM.',
+  description: 'Controls whether you can use Farore\'s Wind to warp between OoT and MM.',
   default: false,
   cond: (x: any) => hasOoTMM(x) && x.spellWindMm,
 }, {
@@ -1313,7 +1313,7 @@ export const SETTINGS = [{
     { value: 'agony',  name: 'Stone of Agony', description: 'Containers will match content when you have the Stone of Agony in OoT' },
     { value: 'always', name: 'Always', description: 'Containers will always match content' },
   ],
-  description: 'Modifies the chest, grass, and pot appearance so that they match their content. Works for unique items, keys, fairies, and souls. Grass and pots will otherwise always be gold if the item has not been collected',
+  description: 'Modifies the appearance of chests and other shuffled containers so that they match their content. Other shuffled containers will otherwise always be gold if the item has not been collected.<br>Works for unique items, Small and Boss Keys, Silver Rupees, Stray Fairies, Skulltula Tokens, and Souls',
   default: 'always'
 }, {
   key: 'csmcHearts',
@@ -1321,7 +1321,7 @@ export const SETTINGS = [{
   category: 'main.misc',
   type: 'boolean',
   default: true,
-  description: 'Use a specific texture for heart pieces/containers',
+  description: 'Use a specific texture for Heart Pieces/Containers',
   cond: (x: any) => x.csmc !== 'never',
 }, {
   key: 'csmcMapCompass',
@@ -1329,7 +1329,7 @@ export const SETTINGS = [{
   category: 'main.misc',
   type: 'boolean',
   default: true,
-  description: 'Use a specific texture for maps/compasses',
+  description: 'Use a specific texture for Maps/Compasses',
   cond: (x: any) => x.csmc !== 'never',
 }, {
   key: 'csmcSkulltula',
@@ -1352,7 +1352,7 @@ export const SETTINGS = [{
   name: 'Blast Mask Cooldown',
   category: 'main.misc',
   type: 'enum',
-  description: 'Changes the cooldown between each explostion of the Blast Mask',
+  description: 'Changes the cooldown between each explosion of the Blast Mask',
   values: [
     { value: 'instant', name: 'Instant (0s)' },
     { value: 'veryshort', name: 'Very Short (~2s)' },
@@ -1373,7 +1373,7 @@ export const SETTINGS = [{
     { value: 'veryslow', name: 'Very Slow', description: 'The time will flow 66% slower than usual' },
     { value: 'slow', name: 'Slow', description: 'The time will flow 33% slower than usual' },
     { value: 'default', name: 'Default', description: 'The normal clock speed' },
-    { value: 'fast', name: 'Fast', description: 'The clock speed will twice as fast than usual' },
+    { value: 'fast', name: 'Fast', description: 'The clock speed will be twice as fast than usual' },
     { value: 'veryfast', name: 'Very Fast', description: 'USE AT OWN RISK!! - The clock speed will be 3x faster than usual, even on inverted' },
     { value: 'superfast', name: 'Super Fast', description: 'USE AT OWN RISK!! - The clock speed will be 6x faster than usual, even on inverted' },
   ],
@@ -1397,7 +1397,7 @@ export const SETTINGS = [{
   name: 'Keep Items on Cycle Reset',
   category: 'main.misc',
   type: 'boolean',
-  description: 'Keep items through a cycle reset',
+  description: 'Keeps items through a cycle reset',
   default: false,
   cond: hasMM,
 }, {
@@ -1421,7 +1421,7 @@ export const SETTINGS = [{
   name: 'Hookshot Anywhere (OoT)',
   category: 'main.misc',
   type: 'enum',
-  description: 'Modifies all surfaces to be hooked onto and if it is expected in logic',
+  description: 'Modifies all surfaces to be able to be hooked onto and if it is expected in logic',
   values: [
     { value: 'off', name: 'Off' },
     { value: 'enabled', name: 'On' },
@@ -1434,7 +1434,7 @@ export const SETTINGS = [{
   name: 'Hookshot Anywhere (MM)',
   category: 'main.misc',
   type: 'enum',
-  description: 'Modifies all surfaces to be hooked onto and if it is expected in logic',
+  description: 'Modifies all surfaces to be able to be hooked onto and if it is expected in logic',
   values: [
     { value: 'off', name: 'Off' },
     { value: 'enabled', name: 'On' },
@@ -1491,7 +1491,7 @@ export const SETTINGS = [{
   name: 'Alter Lost Woods Exits',
   category: 'main.misc',
   type: 'boolean',
-  description: 'There are unused exits in the Lost Woods that return you to the lost woods. When this is on, all the "got lost" exits in the Lost Woods that would normally take you to Kokiri Forest instead take you back to the Lost Woods, keeping your compass direction intact.',
+  description: 'There are unused exits in the Lost Woods that return you back to the Lost Woods. When this is on, all the "got lost" exits in the Lost Woods that would normally take you to Kokiri Forest instead take you back to the Lost Woods, keeping your compass direction intact.',
   default: false,
   cond: hasOoT,
 }, {
@@ -1511,21 +1511,14 @@ export const SETTINGS = [{
   default: false,
   cond: hasOoT,
 }, {
-  key: 'fillWallets',
-  name: 'Fill Wallets',
-  category: 'items.extensions',
-  type: 'boolean',
-  description: 'Fills the wallet upon finding a new one',
-  default: false
-}, {
   key: 'progressiveShieldsOot',
   name: 'OoT Shields',
   category: 'items.progressive',
   type: 'enum',
-  description: 'Alters OOT Shields behavior',
+  description: 'Alters the behavior of the OoT Shields',
   values: [
     { value: 'separate', name: 'Separate', description: 'They can be found independently from each other' },
-    { value: 'progressive', name: 'Progressive', description: 'Each Progressive Shield will grant you the next one: Deku Shield -> Hylian Shield -> Mirror Shield. Other Deku and Hylian Shields do not count towards this chain, only the Progressive Shield item.' },
+    { value: 'progressive', name: 'Progressive', description: 'Each Progressive Shield will grant you the next one: Deku Shield -> Hylian Shield -> Mirror Shield. Other Deku and Hylian Shields do not count towards this chain, only the Progressive Shield item does.' },
   ],
   default: 'separate',
   cond: hasOoT,
@@ -1534,10 +1527,10 @@ export const SETTINGS = [{
   name: 'OoT Swords',
   category: 'items.progressive',
   type: 'enum',
-  description: 'Alters OOT Swords behavior',
+  description: 'Alters the behavior of the OoT Swords',
   values: [
     { value: 'separate', name: 'Separate', description: 'They can be found independently from each other' },
-    { value: 'goron', name: 'Progressive Knife and Biggoron', description: 'Kokiri Sword and Master Sword are independent. However Giant\'s Knife and Biggoron Sword are progressive.' },
+    { value: 'goron', name: 'Progressive Knife and Biggoron', description: 'Kokiri Sword and Master Sword are independent. However, Giant\'s Knife and Biggoron Sword are progressive.' },
     { value: 'progressive', name: 'Progressive', description: 'Each Progressive Sword will grant you the next one: Kokiri Sword -> Master Sword -> Giant\'s Knife -> Biggoron Sword' },
   ],
   default: 'goron',
@@ -1547,10 +1540,10 @@ export const SETTINGS = [{
   name: 'MM Shields',
   category: 'items.progressive',
   type: 'enum',
-  description: 'Alters MM Shields behavior',
+  description: 'Alters the behavior of the MM Shields',
   values: [
     { value: 'separate', name: 'Separate', description: 'They can be found independently from each other' },
-    { value: 'progressive', name: 'Progressive', description: 'Each Progressive Shield will grant you the next one: Hero Shield -> Mirror Shield. Other Hero Shields do not count towards this chain, only the Progressive Shield item. If shields are shared, Hero Shield will be obtained alongside Hylian Shield' },
+    { value: 'progressive', name: 'Progressive', description: 'Each Progressive Shield will grant you the next one: Hero\'s Shield -> Mirror Shield. Other Hero\'s Shields do not count towards this chain, only the Progressive Shield item does. If shields are shared, the Hero\'s Shield will be obtained alongside the Hylian Shield' },
   ],
   default: 'separate',
   cond: hasMM,
@@ -1559,7 +1552,7 @@ export const SETTINGS = [{
   name: 'MM Great Fairy Sword',
   category: 'items.progressive',
   type: 'enum',
-  description: 'Controls whether Great Fairy Sword is included in sword progression',
+  description: 'Controls whether the Great Fairy Sword is included in sword progression',
   values: [
     { value: 'separate', name: 'Separate' },
     { value: 'progressive', name: 'Progressive' },
@@ -1571,10 +1564,10 @@ export const SETTINGS = [{
   name: 'MM Goron Lullaby',
   category: 'items.progressive',
   type: 'enum',
-  description: 'Alters the behavior of Goron Lullaby',
+  description: 'Alters the behavior of the Goron Lullaby',
   values: [
     { value: 'single', name: 'Full Lullaby Only', description: 'Only the Goron Lullaby can be found, and when playing with Songs on Song Locations, Baby Goron in MM is no longer a Song Location' },
-    { value: 'progressive', name: 'Progressive', description: 'Lullaby Intro will be received first before getting the full song' },
+    { value: 'progressive', name: 'Progressive', description: 'The Lullaby Intro will be received first before getting the full song' },
   ],
   default: 'progressive',
   cond: hasMM,
@@ -1585,33 +1578,40 @@ export const SETTINGS = [{
   type: 'enum',
   description: 'Alters the behavior of Clocks',
   values: [
-    { value: 'separate', name: 'Separate', description: 'Clocks will be independant of each other. If you don\t select a starting clock, one will be given to you at random.' },
+    { value: 'separate', name: 'Separate', description: 'Clocks will be independent of each other. If you don\'t select a starting clock, one will be given to you at random.' },
     { value: 'ascending', name: 'Ascending', description: 'Clocks will be received in ascending order.' },
     { value: 'descending', name: 'Descending ', description: 'Clocks will be received in descending order.' },
   ],
   default: 'ascending',
   cond: (s: any) => s.clocks,
 }, {
+  key: 'fillWallets',
+  name: 'Fill Wallets',
+  category: 'items.extensions',
+  type: 'boolean',
+  description: 'Fills the wallet upon finding a new one',
+  default: false
+}, {
   key: 'bottleContentShuffle',
   name: 'Random Bottle Contents',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Randomize the content of the bottles',
+  description: 'Randomize what bottles from both games contain upon finding them in the world',
   default: false
 }, {
   key: 'stoneAgonyMm',
   name: 'Stone of Agony in MM',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Enables stone of agony in MM',
+  description: 'Enables Stone of Agony in MM',
   default: false,
   cond: hasMM,
 }, {
   key: 'sticksNutsUpgradesMm',
-  name: 'Sticks & Nuts Upgrades in MM',
+  name: 'Deku Stick & Nut Upgrades in MM',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Enables sticks and nuts upgrades in MM',
+  description: 'Enables Deku Stick and Nut upgrades in MM',
   default: false,
   cond: hasMM,
 }, {
@@ -1635,7 +1635,7 @@ export const SETTINGS = [{
   name: 'Blue Fire Arrows',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Gives the OOT Ice Arrows the properties of Blue Fire',
+  description: 'Gives the OoT Ice Arrows the properties of Blue Fire',
   default: false,
   cond: hasOoT,
 }, {
@@ -1643,7 +1643,7 @@ export const SETTINGS = [{
   name: 'Sunlight Arrows',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Gives the OOT Light Arrows the ability to activate most sun switches',
+  description: 'Gives the OoT Light Arrows the ability to activate most sun switches',
   default: false,
   cond: hasOoT,
 }, {
@@ -1651,7 +1651,7 @@ export const SETTINGS = [{
   name: 'Short Hookshot in MM',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Adds a short hookshot in MM (logic accounts for this). A trick is also there for some of the harder spots',
+  description: 'Adds a short Hookshot in MM, which logic accounts for. A trick is also there for some of the harder spots',
   default: false,
   cond: hasMM,
 }, {
@@ -1659,7 +1659,7 @@ export const SETTINGS = [{
   name: 'Child Wallets',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Shuffles the starting Wallets... making it so you have to find it to hold anything!',
+  description: 'Shuffles the starting wallet in each game... making it so you have to find it to hold anything!',
   default: false
 }, {
   key: 'colossalWallets',
@@ -1689,7 +1689,7 @@ export const SETTINGS = [{
   name: 'Skeleton Key (OoT)',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Adds a Skeleton Key that can open every small-key-locked door.',
+  description: 'Adds a Skeleton Key that can open every small-key-locked door in OoT.',
   default: false,
   cond: hasOoT,
 }, {
@@ -1697,7 +1697,7 @@ export const SETTINGS = [{
   name: 'Skeleton Key (MM)',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Adds a Skeleton Key that can open every small-key-locked door.',
+  description: 'Adds a Skeleton Key that can open every small-key-locked door in MM.',
   default: false,
   cond: hasMM,
 }, {
@@ -1705,7 +1705,7 @@ export const SETTINGS = [{
   name: 'Magical Rupee',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Adds a Magical Rupee that can trigger every silver-rupee event.',
+  description: 'Adds a Magical Rupee that can trigger every silver-rupee event in OoT dungeons.',
   default: false,
   cond: (s: any) => s.silverRupeeShuffle !== 'vanilla',
 }, {
@@ -1714,10 +1714,10 @@ export const SETTINGS = [{
   category: 'items.extensions',
   type: 'enum',
   values: [
-    { value: 'free', name: 'Free', description: 'Bombchu can be collected freely. Max ammo is 50.' },
-    { value: 'bombBag', name: 'Bomb Bag', description: 'Bombchu can be collected in the bomb bag. Max ammo is the bomb bag maximum.' },
-    { value: 'bagFirst', name: 'Bombchu Bag - First Pack', description: 'The first non-shop bombchu you find will turn into a bombchu bag. Max ammo is 50.' },
-    { value: 'bagSeparate', name: 'Bombchu Bag - Separate Items', description: 'Separate bombchu bags are in the item pool. It is required to get bombchu. Max ammo is 20/30/40.' },
+    { value: 'free', name: 'Free', description: 'Bombchu can be used freely once collected. Max ammo is 50.' },
+    { value: 'bombBag', name: 'Bomb Bag', description: 'Bombchu can be used when you have the Bomb Bag. Max ammo is the Bomb Bag maximum.' },
+    { value: 'bagFirst', name: 'Bombchu Bag - First Pack', description: 'The first out-of-shop bombchu you find will turn into a Bombchu Bag. Max ammo is 50.' },
+    { value: 'bagSeparate', name: 'Bombchu Bag - Separate Items', description: 'Bombchu Bags and bombchu are placed in the item pool separately. Without the Bombchu Bag, bombchu cannot be used. Max ammo is 20/30/40.' },
   ],
   description: 'Controls the behavior of bombchu.',
   default: 'free',
@@ -1728,10 +1728,10 @@ export const SETTINGS = [{
   category: 'items.extensions',
   type: 'enum',
   values: [
-    { value: 'free', name: 'Free', description: 'Bombchu can be collected freely. Max ammo is 50.' },
-    { value: 'bombBag', name: 'Bomb Bag', description: 'Bombchu can be collected in the bomb bag. Max ammo is the bomb bag maximum.' },
-    { value: 'bagFirst', name: 'Bombchu Bag - First Pack', description: 'The first non-shop bombchu you find will turn into a bombchu bag. Max ammo is 50.' },
-    { value: 'bagSeparate', name: 'Bombchu Bag - Separate Items', description: 'Separate bombchu bags are in the item pool. It is required to get bombchu. Max ammo is 20/30/40.' },
+    { value: 'free', name: 'Free', description: 'Bombchu can be used freely once collected. Max ammo is 50.' },
+    { value: 'bombBag', name: 'Bomb Bag', description: 'Bombchu can be used when you have the Bomb Bag. Max ammo is the Bomb Bag maximum.' },
+    { value: 'bagFirst', name: 'Bombchu Bag - First Pack', description: 'The first out-of-shop bombchu you find will turn into a Bombchu Bag. Max ammo is 50.' },
+    { value: 'bagSeparate', name: 'Bombchu Bag - Separate Items', description: 'Bombchu Bags and bombchu are placed in the item pool separately. Without the Bombchu Bag, bombchu cannot be used. Max ammo is 20/30/40.' },
   ],
   description: 'Controls the behavior of bombchu.',
   default: 'bombBag',
@@ -1781,7 +1781,7 @@ export const SETTINGS = [{
   name: "Goron Tunic (MM)",
   category: 'items.extensions',
   type: 'boolean',
-  description: "Adds Goron Tunic in Majora's Mask.",
+  description: "Adds the Goron Tunic in Majora's Mask.",
   default: false,
   cond: hasMM,
 }, {
@@ -1789,7 +1789,7 @@ export const SETTINGS = [{
   name: "Zora Tunic (MM)",
   category: 'items.extensions',
   type: 'boolean',
-  description: "Adds Zora Tunic in Majora's Mask.",
+  description: "Adds the Zora Tunic in Majora's Mask.",
   default: false,
   cond: hasMM,
 }, {
@@ -1797,7 +1797,7 @@ export const SETTINGS = [{
   name: "Scales (MM)",
   category: 'items.extensions',
   type: 'boolean',
-  description: "Adds Silver Scale and Golden Scale in Majora's Mask.",
+  description: "Adds the Silver Scale and Golden Scale in Majora's Mask.",
   default: false,
   cond: hasMM,
 }, {
@@ -1805,7 +1805,7 @@ export const SETTINGS = [{
   name: "Strength (MM)",
   category: 'items.extensions',
   type: 'boolean',
-  description: "Adds Goron's Bracelet, Silver Gauntlets, and Golden Gauntlets in Majora's Mask.",
+  description: "Adds the Goron's Bracelet, Silver Gauntlets and Golden Gauntlets in Majora's Mask.",
   default: false,
   cond: hasMM,
 }, {
@@ -1813,7 +1813,7 @@ export const SETTINGS = [{
   name: "Megaton Hammer (MM)",
   category: 'items.extensions',
   type: 'boolean',
-  description: "Adds Megaton Hammer in Majora's Mask.",
+  description: "Adds the Megaton Hammer in Majora's Mask.",
   default: false,
   cond: hasMM,
 }, {
@@ -1821,7 +1821,7 @@ export const SETTINGS = [{
   name: "Spin Attack Upgrade (OoT)",
   category: 'items.extensions',
   type: 'boolean',
-  description: "Add the spin attack upgrade as an item in OoT.",
+  description: "Add the Spin Attack upgrade as an item in OoT.",
   default: false,
   cond: hasOoT,
 }, {
@@ -1829,7 +1829,7 @@ export const SETTINGS = [{
   name: "Extra Child Swords (OoT)",
   category: 'items.extensions',
   type: 'boolean',
-  description: "Add the various Majora's Mask swords in OoT, as upgrades to the kokiri sword.",
+  description: "Add the various Majora's Mask swords in OoT, as upgrades to the Kokiri Sword.",
   default: false,
   cond: (x: any) => x.progressiveSwordsOot !== 'progressive' && hasOoT(x),
 }, {
@@ -1858,18 +1858,18 @@ export const SETTINGS = [{
   cond: hasOoT,
 }, {
   key: 'ocarinaButtonsShuffleOot',
-  name: 'Ocarina Buttons Shuffle (OoT)',
+  name: 'Ocarina Buttons (OoT)',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Adds the Ocarina Buttons as items that are shuffled.',
+  description: 'Add the Ocarina Buttons for OoT into the item pool. Ocarina notes cannot be played until the corresponding button is obtained.',
   default: false,
   cond: hasOoT,
 }, {
   key: 'ocarinaButtonsShuffleMm',
-  name: 'Ocarina Buttons Shuffle (MM)',
+  name: 'Ocarina Buttons (MM)',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Adds the Ocarina Buttons as items that are shuffled.',
+  description: 'Add the Ocarina Buttons for MM into the item pool. Ocarina notes cannot be played until the corresponding button is obtained.',
   default: false,
   cond: hasMM,
 }, {
@@ -1877,7 +1877,7 @@ export const SETTINGS = [{
   name: 'Enemy Souls (OoT)',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Add enemy souls into the item pool. Enemies won\'t spawn unless their soul is obtained.',
+  description: 'Add Souls for OoT enemies into the item pool. They won\'t spawn unless their Soul is obtained.',
   default: false,
   cond: hasOoT,
 }, {
@@ -1885,7 +1885,7 @@ export const SETTINGS = [{
   name: 'Enemy Souls (MM)',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Add enemy souls into the item pool. Enemies won\'t spawn unless their soul is obtained.',
+  description: 'Add Souls for MM enemies into the item pool. They won\'t spawn unless their Soul is obtained.',
   default: false,
   cond: hasMM,
 }, {
@@ -1893,7 +1893,7 @@ export const SETTINGS = [{
   name: 'Boss Souls (OoT)',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Add boss souls into the item pool. Enemies won\'t spawn unless their soul is obtained.',
+  description: 'Add Souls for OoT bosses into the item pool. They won\'t spawn unless their Soul is obtained.',
   default: false,
   cond: hasOoT,
 }, {
@@ -1901,7 +1901,7 @@ export const SETTINGS = [{
   name: 'Boss Souls (MM)',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Add boss souls into the item pool. Enemies won\'t spawn unless their soul is obtained.',
+  description: 'Add Souls for MM bosses into the item pool. They won\'t spawn unless their Soul is obtained.',
   default: false,
   cond: hasMM,
 }, {
@@ -1909,7 +1909,7 @@ export const SETTINGS = [{
   name: 'NPC Souls (OoT)',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Add NPC souls into the item pool. NPCs won\'t spawn unless their soul is obtained.',
+  description: 'Add Souls for OoT NPCs into the item pool. They won\'t spawn unless their Soul is obtained.',
   default: false,
   cond: hasOoT,
 }, {
@@ -1917,7 +1917,7 @@ export const SETTINGS = [{
   name: 'NPC Souls (MM)',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Add NPC souls into the item pool. NPCs won\'t spawn unless their soul is obtained.',
+  description: 'Add Souls for MM NPCs into the item pool. They won\'t spawn unless their Soul is obtained.',
   default: false,
   cond: hasMM,
 }, {
@@ -1925,7 +1925,7 @@ export const SETTINGS = [{
   name: 'Misc. Souls (OoT)',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Add misc. souls into the item pool. Corresponding actors won\'t spawn unless their soul is obtained.',
+  description: 'Add Souls for OoT Business Scrubs and Gold Skulltulas into the item pool. They won\'t spawn unless their Soul is obtained.',
   default: false,
   cond: hasOoT,
 }, {
@@ -1933,7 +1933,7 @@ export const SETTINGS = [{
   name: 'Misc. Souls (MM)',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Add misc. souls into the item pool. Corresponding actors won\'t spawn unless their soul is obtained.',
+  description: 'Add Souls for MM Business Scrubs and Gold Skulltulas into the item pool. They won\'t spawn unless their Soul is obtained.',
   default: false,
   cond: hasMM,
 }, {
@@ -1941,7 +1941,7 @@ export const SETTINGS = [{
   name: 'Clocks as Items',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Add items representing every Majora\'s Mask half day into the pool. The moon will crash early unless you collect these items.',
+  description: 'Add items representing every Majora\'s Mask day and night into the pool. The moon will crash early unless you collect these items.',
   default: false,
   cond: hasMM,
 }, {
@@ -1949,7 +1949,7 @@ export const SETTINGS = [{
   name: 'Lenient Goron Spikes',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Goron spikes can charge midair and keep their charge. Minimum speed for goron spikes is removed.',
+  description: 'Goron Spikes can charge midair and keep their charge. Minimum speed for Goron Spikes is removed.',
   default: true,
   cond: hasMM,
 }, {
@@ -1965,7 +1965,7 @@ export const SETTINGS = [{
   name: 'Coins',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Enable the leftover coin items. These can be used for special conds',
+  description: 'Enable the leftover Coin items. These can be used for special conditions',
   default: false
 }, {
   key: 'coinsRed',
@@ -2012,14 +2012,14 @@ export const SETTINGS = [{
   name: 'Rupoors',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Add rupoors to the item pool. They remove 10 rupees when collected',
+  description: 'Add Rupoors to the item pool. They remove 10 rupees when collected',
   default: false
 }, {
   key: 'songOfDoubleTimeOot',
   name: 'Song of Double Time (OoT)',
   category: 'items.extensions',
   type: 'boolean',
-  description: 'Enables using Song of Double Time in OoT when you have Song of Time in OoT',
+  description: 'Enables using Song of Double Time in OoT when you have the Song of Time in OoT',
   default: false,
   cond: hasOoT
 }, {
@@ -2031,14 +2031,14 @@ export const SETTINGS = [{
   cond: (s: any) => hasOoTMM(s) && s.stoneAgonyMm,
 }, {
   key: 'sharedSpinUpgrade',
-  name: 'Shared Spin Upgrade',
+  name: 'Shared Spin Attack Upgrade',
   category: 'items.shared',
   type: 'boolean',
   default: false,
   cond: (s: any) => hasOoTMM(s) && s.spinUpgradeOot,
 }, {
   key: 'sharedNutsSticks',
-  name: 'Shared Nuts & Sticks',
+  name: 'Shared Deku Sticks & Nuts',
   category: 'items.shared',
   type: 'boolean',
   default: false,
@@ -2367,7 +2367,7 @@ export const SETTINGS = [{
   name: 'Ageless Sticks',
   category: 'items.ageless',
   type: 'boolean',
-  description: 'Allows Link to use deku sticks independently of his age',
+  description: 'Allows Link to use Deku Sticks independently of his age',
   default: false,
   cond: hasOoT,
 }, {
@@ -2375,7 +2375,7 @@ export const SETTINGS = [{
   name: 'Ageless Boomerang',
   category: 'items.ageless',
   type: 'boolean',
-  description: 'Allows Link to use the boomerang independently of his age',
+  description: 'Allows Link to use the Boomerang independently of his age',
   default: false,
   cond: hasOoT,
 }, {
@@ -2383,7 +2383,7 @@ export const SETTINGS = [{
   name: 'Ageless Hammer',
   category: 'items.ageless',
   type: 'boolean',
-  description: 'Allows Link to use the hammer independently of his age',
+  description: 'Allows Link to use the Hammer independently of his age',
   default: false,
   cond: hasOoT,
 }, {
@@ -2391,7 +2391,7 @@ export const SETTINGS = [{
   name: 'Ageless Hookshot',
   category: 'items.ageless',
   type: 'boolean',
-  description: 'Allows Link to use the hookshot independently of his age',
+  description: 'Allows Link to use the Hookshot independently of his age',
   default: false,
   cond: hasOoT,
 }, {
@@ -2399,7 +2399,7 @@ export const SETTINGS = [{
   name: 'Ageless Slingshot',
   category: 'items.ageless',
   type: 'boolean',
-  description: 'Allows Link to use the slingshot independently of his age',
+  description: 'Allows Link to use the Slingshot independently of his age',
   default: false,
   cond: hasOoT,
 }, {
@@ -2407,7 +2407,7 @@ export const SETTINGS = [{
   name: 'Ageless Bow',
   category: 'items.ageless',
   type: 'boolean',
-  description: 'Allows Link to use the bow independently of his age',
+  description: 'Allows Link to use the Bow independently of his age',
   default: false,
   cond: hasOoT,
 }, {
@@ -2415,7 +2415,7 @@ export const SETTINGS = [{
   name: 'Ageless Child Trade',
   category: 'items.ageless',
   type: 'boolean',
-  description: 'Allows Link to use the child trade items independently of his age',
+  description: 'Allows Link to use the Child trade items independently of his age',
   default: false,
   cond: hasOoT,
 }, {
@@ -2423,7 +2423,7 @@ export const SETTINGS = [{
   name: 'Ageless Strength',
   category: 'items.ageless',
   type: 'boolean',
-  description: 'Allows Child Link to use adult strength upgrades',
+  description: 'Allows Child Link to use the Adult Strength upgrades',
   default: false,
   cond: hasOoT,
 }, {
@@ -2448,7 +2448,7 @@ export const SETTINGS = [{
     { value: 'ownGame', name: 'Own Game', cond: hasOoTMM },
     { value: 'full', name: 'Full' },
   ],
-  description: 'Enable the ability to shuffle dungeons within their own game or across both.',
+  description: 'Shuffle dungeons either within their own game or across both',
   default: 'none'
 }, {
   key: 'erGrottos',
@@ -2460,14 +2460,14 @@ export const SETTINGS = [{
     { value: 'ownGame', name: 'Own Game', cond: hasOoTMM },
     { value: 'full', name: 'Full' },
   ],
-  description: 'Shuffle grottos and graves.',
+  description: 'Shuffle grottos and graves either within their own game or across both',
   default: 'none'
 }, {
   key: 'erNoPolarity',
   name: 'No Entrance Polarity',
   category: 'entrances',
   type: 'boolean',
-  description: 'Some entrances have a polarity (e.g. dungeons entrances and exits). Normally, they\'re shuffled respecting that polarity, so a dungeon entrance will always lead to another dungeon entrance, never to an exit. This option disables that.',
+  description: 'Some entrances have a polarity (e.g. dungeon entrances and exits). Normally, they\'re shuffled respecting that polarity, so a dungeon entrance will always lead to another dungeon entrance, never to an exit. This option disables that.',
   default: false,
 }, {
   key: 'erSelfLoops',
@@ -2552,7 +2552,7 @@ export const SETTINGS = [{
   name: 'Spawn Shuffle',
   category: 'entrances',
   type: 'enum',
-  description: 'Shuffle the starting positions of the player.',
+  description: 'Shuffle the starting positions of the player in OoT.',
   values: [
     { value: 'none', name: 'None' },
     { value: 'child', name: 'Child Only' },
@@ -2596,7 +2596,7 @@ export const SETTINGS = [{
   name: 'Shuffle Clock Tower with Dungeons',
   category: 'entrances',
   type: 'boolean',
-  description: 'If paired with another dungeon shuffle, allows saving from the Quest Menu with L/C-Up while on the Clock Tower Roof.',
+  description: 'If paired with another dungeon shuffle, allows saving from the Quest Menu with L/C-Up while on the Clock Tower Roof.', /*How does the new MM saving system handle this?*/
   default: false,
   cond: (x: any) => hasMM(x) && x.erDungeons !== 'none'
 }, {
@@ -2608,11 +2608,11 @@ export const SETTINGS = [{
   cond: (x: any) => hasMM(x) && x.erDungeons !== 'none'
 }, {
   key: 'erPirateFortress',
-  name: 'Shuffle Pirate Fortress with Dungeons',
+  name: 'Shuffle Pirates\' Fortress with Dungeons',
   category: 'entrances',
   type: 'boolean',
   default: false,
-  description: 'Shuffles the main Pirate Fortress entrance among dungeons. Option disabled if the other entrances are shuffled among the overworld.',
+  description: 'Shuffles the main Pirates\' Fortress entrance among dungeons. Option disabled if the other entrances are shuffled among the overworld.',
   cond: (x: any) => hasMM(x) && x.erDungeons !== 'none' && ((x.erPiratesWorld && x.erOverworld === 'none') || !x.erPiratesWorld)
 }, {
   key: 'erBeneathWell',
@@ -2623,7 +2623,7 @@ export const SETTINGS = [{
   cond: (x: any) => hasMM(x) && x.erDungeons !== 'none'
 }, {
   key: 'erIkanaCastle',
-  name: 'Shuffle Ikana Castle Interior with Dungeons',
+  name: 'Shuffle Ikana Castle\'s Interior with Dungeons',
   category: 'entrances',
   type: 'boolean',
   default: false,
@@ -2646,14 +2646,14 @@ export const SETTINGS = [{
     { value: 'full', name: 'Full' },
   ],
   default: 'none',
-  description: '- Every entrance to Hyrule Field except Market<br>- The entrance to Gerudo Fortress from Gerudo Valley<br>- The entrance to Death Mountain from Kakariko<br>- The entrances to the four main regions in MM<br>- The entrance to Romani Ranch',
+  description: 'Shuffle major regions either within their own game or across both. These include:<br>- Every entrance to Hyrule Field except Market<br>- The entrance to Gerudo Fortress from Gerudo Valley<br>- The entrance to Death Mountain from Kakariko<br>- The entrances to the four main regions in MM<br>- The entrance to Romani Ranch',
   cond: (x: any) => x.erOverworld === 'none',
 }, {
   key: 'erRegionsExtra',
   name: 'Shuffle Market Entrance',
   category: 'entrances',
   type: 'boolean',
-  description: 'Shuffle Hyrule Field\'s Market entrance among the regions.',
+  description: 'Shuffle the entrance from Hyrule Field to Market among the regions.',
   default: false,
   cond: (x: any) => hasOoT(x) && x.erRegions !== 'none'
 }, {
@@ -2661,7 +2661,7 @@ export const SETTINGS = [{
   name: 'Shuffle Regional Shortcuts',
   category: 'entrances',
   type: 'boolean',
-  description: 'Shuffles the various shortcuts between regions.<br>- Lost Woods/Goron City<br>- Lost Woods/Zora\'s River<br>- Zora\'s Domain/Lake Hylia',
+  description: 'Shuffles the various shortcuts between regions. These include:<br>- Lost Woods/Goron City<br>- Lost Woods/Zora\'s River<br>- Zora\'s Domain/Lake Hylia',
   default: false,
   cond: (x: any) => hasOoT(x) && x.erRegions !== 'none'
 }, {
@@ -2675,14 +2675,14 @@ export const SETTINGS = [{
     { value: 'full', name: 'Full' },
   ],
   default: 'none',
-  description: 'Shuffle every overworld entrance.',
+  description: 'Shuffle every overworld entrance either within their own game or across both',
 }, {
   key: 'erPiratesWorld',
-  name: 'Shuffle Pirate Fortress Entrances',
+  name: 'Shuffle Pirates\' Fortress Entrances',
   category: 'entrances',
   type: 'boolean',
   default: false,
-  description: 'Shuffle some entrances within Pirate\'s Fortress, including the main entrance if Overworld ER is enabled.<br>Shuffle the Sewers exit door if Extra Interiors are enabled.',
+  description: 'Shuffle some entrances within Pirates\' Fortress, including the main entrance if Overworld ER is enabled.<br>Shuffle the Sewers exit door if Extra Interiors are enabled.',
   cond: (x: any) => hasMM(x) && (x.erOverworld !== 'none' || x.erIndoorsExtra)
 }, {
   key: 'erIndoors',
@@ -2695,7 +2695,7 @@ export const SETTINGS = [{
     { value: 'full', name: 'Full' },
   ],
   default: 'none',
-  description: 'Enable the ability to shuffle interiors in their own game or across both games.',
+  description: 'Shuffle interiors either within their own game or across both',
 }, {
   key: 'erIndoorsMajor',
   name: 'Shuffle Most Interiors',
@@ -2709,7 +2709,7 @@ export const SETTINGS = [{
   name: 'Shuffle Extra Interiors',
   category: 'entrances',
   type: 'boolean',
-  description: 'Shuffle additional, more complex interiors. These include:<br>- OOT: Link\'s House, Temple of Time, Windmill, Kak Potion Shop<br>- MM: Stock Pot Inn, Astral Observatory/Bombers\' Hideout, Swamp Tourist Hut, Ikana Spring Cave, Music Box House<br>- Pirate\'s Fortress Sewers Exit is included if Shuffle Pirate Fortress Entrances is enabled',
+  description: 'Shuffle additional, more complex interiors. These include:<br>- OoT: Link\'s House, Temple of Time, Windmill, Kak Potion Shop<br>- MM: Stock Pot Inn, Astral Observatory/Bombers\' Hideout, Swamp Tourist Hut, Ikana Spring Cave, Music Box House<br>- Pirate\'s Fortress Sewers Exit is included if Shuffle Pirate Fortress Entrances is enabled',
   default: false,
   cond: (x: any) => x.erIndoors !== 'none'
 }, {
@@ -2717,16 +2717,16 @@ export const SETTINGS = [{
   name: 'Shuffle Mask Shop/Clock Tower Entrances',
   category: 'entrances',
   type: 'boolean',
-  description: 'Shuffle the Mask Shop & Clock Tower exits among the other indoors.',
+  description: 'Shuffle the Mask Shop & Clock Tower entrances among the other indoors.',
   default: false,
   cond: (x: any) => x.erIndoors === 'full' && (!x.erMixedIndoors || x.erMixed === 'full'),
 }, {
   key: 'erWarps',
-  name: 'Shuffle Warp Songs and Soaring',
+  name: 'Shuffle Warp Songs and Soaring Spots',
   category: 'entrances',
   type: 'enum',
   values: [
-    { value: 'none', name: 'None', description: 'Warp songs and soaring are not shuffled.' },
+    { value: 'none', name: 'None', description: 'Warp songs and soaring spots are not shuffled.' },
     { value: 'ootOnly', name: 'OoT Only', description: 'Shuffles only OoT\'s warp songs among each other.', cond: hasOoT },
     { value: 'mmOnly', name: 'MM Only', description: 'Shuffles only MM\'s soaring spots among each other.', cond: hasMM },
     { value: 'ownGame', name: 'Own Game', description: 'Shuffles both warp songs and soaring spots within their own game.', cond: hasOoTMM },
@@ -2741,9 +2741,9 @@ export const SETTINGS = [{
   category: 'entrances',
   type: 'enum',
   values: [
-    { value: 'none', name: 'None', description: 'One-Way entrances are not shuffled.' },
-    { value: 'ownGame', name: 'Own Game', description: 'One-Way entrances are only shuffled among their own game.', cond: hasOoTMM },
-    { value: 'full', name: 'Full', description: 'One-Way entrances can be shuffled among both games.' },
+    { value: 'none', name: 'None', description: 'One-way entrances are not shuffled.' },
+    { value: 'ownGame', name: 'Own Game', description: 'One-way entrances are only shuffled among their own game.', cond: hasOoTMM },
+    { value: 'full', name: 'Full', description: 'One-way entrances can be shuffled among both games.' },
   ],
   description: 'Enables the option of shuffling various one-way entrances.',
   default: 'none',
@@ -2760,7 +2760,7 @@ export const SETTINGS = [{
   name: 'Shuffle Ikana Castle One-Ways',
   category: 'entrances',
   type: 'boolean',
-  description: 'Shuffles the one-way entrances in Ikana Castle with the others. This is the keg-blocked entrance and the block moved by the switch.',
+  description: 'Shuffles the one-way entrances in Ikana Castle among the others. This is the keg-blocked entrance and the block moved by the switch.',
   default: false,
   cond: (x: any) => hasMM(x) && x.erOneWays !== 'none'
 }, {
@@ -2768,15 +2768,15 @@ export const SETTINGS = [{
   name: 'Shuffle One-Ways with Warp Songs',
   category: 'entrances',
   type: 'boolean',
-  description: 'Shuffles the warp songs from OOT among one-way entrances. This setting is disabled if the warp songs are shuffled with "Shuffle Warp Songs and Soaring".',
+  description: 'Shuffles the warp songs from OoT among one-way entrances. This setting is disabled if the warp songs are shuffled with "Shuffle Warp Songs and Soaring Spots".',
   default: false,
   cond: (x: any) => hasOoT(x) && x.erOneWays !== 'none' && x.erWarps !== 'ootOnly' && x.erWarps !== 'full' && x.erWarps !== 'ownGame'
 }, {
   key: 'erOneWaysStatues',
-  name: 'Shuffle One-Ways with Owl Statues',
+  name: 'Shuffle One-Ways with Soaring Spots',
   category: 'entrances',
   type: 'boolean',
-  description: 'Shuffles the owl statues from MM among one-way entrances. This setting is disabled if the soaring spots are shuffled with "Shuffle Warp Songs and Soaring".',
+  description: 'Shuffles the soaring spots from MM among one-way entrances. This setting is disabled if the soaring spots are shuffled with "Shuffle Warp Songs and Soaring Spots".',
   default: false,
   cond: (x: any) => hasMM(x) && x.erOneWays !== 'none' && x.erWarps !== 'mmOnly' && x.erWarps !== 'full' && x.erWarps !== 'ownGame'
 }, {
@@ -2792,7 +2792,7 @@ export const SETTINGS = [{
   name: 'Shuffle Altered Lost Woods Exits',
   category: 'entrances',
   type: 'boolean',
-  description: 'Shuffle the Lost Woods entrances added by "Alter Lost Woods Exits" among one-way entrances.',
+  description: 'Shuffle the Lost Woods exits added by the "Alter Lost Woods Exits" setting among one-way entrances. ',
   default: false,
   cond: (x: any) => hasOoT(x) && x.erOneWays !== 'none' && x.alterLostWoodsExits
 }, {
@@ -2800,7 +2800,7 @@ export const SETTINGS = [{
   name: 'Shuffle the Water Void Points in MM',
   category: 'entrances',
   type: 'boolean',
-  description: 'Shuffle the Water Void entrances among one-way entrances. These include:<br>- Zora Cape<br>- Great Bay Coast, south of Pinnacle Rock Entrance<br>- Great Bay Coast, north of Pinnacle Rock Entrance<br>- Pinnacle Rock',
+  description: 'Shuffle the Water Void points among one-way entrances. These can be found at:<br>- Zora Cape<br>- Great Bay Coast, south of the Pinnacle Rock entrance<br>- Great Bay Coast, north of the Pinnacle Rock entrance<br>- Pinnacle Rock',
   default: false,
   cond: (x: any) => hasMM(x) && x.erOneWays !== 'none'
 }, {
@@ -2808,7 +2808,7 @@ export const SETTINGS = [{
   name: 'Allow One-Ways to take you elsewhere than other one-ways',
   category: 'entrances',
   type: 'boolean',
-  description: 'Makes it so one-ways can take you to any place also shuffled.<br>This also affect warp songs and soaring locations if they are included in one-ways.',
+  description: 'Makes it so one-ways can take you to any place also shuffled.<br>This also affects warp songs and soaring spots if they are included in one-ways.',
   default: false,
   cond: (x: any) => x.erOneWays !== 'none'
 }, {

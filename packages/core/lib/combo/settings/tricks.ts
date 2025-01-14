@@ -30,12 +30,12 @@ export const TRICKS: Tricks = {
   OOT_LENS: {
     game: 'oot',
     name: 'Fewer Lens Requirements (OoT)',
-    tooltip: 'Doing things that would normally require Lens will no longer will, except for Treasure Chest Game and Haunted Wasteland.',
+    tooltip: 'Doing things that would normally require Lens no longer will, except for Treasure Chest Game and Haunted Wasteland.',
   },
   OOT_TUNICS: {
     game: 'oot',
     name: 'Fewer Tunic Requirements (OoT)',
-    tooltip: 'Most things that would normally require Tunics no longer will. Fire Temple past the big lava room, Volvagia, Fire Trial without silver rupee shuffle, and Water Temple central pillar still require Tunics.',
+    tooltip: 'Most things that would normally require Tunics no longer will. Fire Temple past the big lava room, Volvagia, Fire Trial without Silver Rupee shuffle, and Water Temple central pillar still require Tunics.',
   },
   OOT_HIDDEN_GROTTOS: {
     game: 'oot',
@@ -116,7 +116,7 @@ export const TRICKS: Tricks = {
   OOT_WATER_LONGSHOT: {
     game: 'oot',
     name: 'Drain Water Temple using Longshot',
-    tooltip: 'Using Longshot, Link can hook to the torches at the bottom in front of the room he meets Ruto.',
+    tooltip: 'Using Longshot, Link can hookshot to the torches at the bottom in front of the room he meets Ruto.',
     linkVideo: 'Link Needed',
   },
   OOT_SAND_RIVER_NOTHING: {
@@ -128,7 +128,7 @@ export const TRICKS: Tricks = {
   OOT_SHADOW_FIRE_ARROW: {
     game: 'oot',
     name: 'Enter Shadow Temple using Fire Arrows',
-    tooltip: 'With a precise setup, it is possible to light all of the torches for the Shadow Temple Entrance with a mix of fire arrows and normal arrow. The timing is very quick.',
+    tooltip: 'With a precise setup, it is possible to light all of the torches for the Shadow Temple Entrance with a mix of Fire Arrows and normal arrows. The timing is very tight.',
     linkVideo: 'https://www.youtube.com/watch?v=im3IXe__8ww&ab_channel=Exodus122',
   },
   OOT_KZ_SKIP: {
@@ -139,8 +139,8 @@ export const TRICKS: Tricks = {
   },
   OOT_LOST_WOODS_ADULT_GS: {
     game: 'oot',
-    name: 'Lost Woods Adult GS without Bean',
-    tooltip: "This bean can be collected using Hookshot at a precise angle after killing it with Bow, Din's Fire, Bombchus, or Longshot.",
+    name: 'Lost Woods Adult GS without Magic Beans',
+    tooltip: "This Gold Skulltula Token can be collected using Hookshot at a precise angle after killing it with Bow, Din's Fire, Bombchus, or Longshot.",
     linkVideo: 'https://www.youtube.com/watch?v=YFLxEw2_PBw&ab_channel=dotzo',
   },
   OOT_WINDMILL_HP_NOTHING: {
@@ -151,7 +151,7 @@ export const TRICKS: Tricks = {
   },
   OOT_LAB_DIVE_NO_GOLD_SCALE: {
     game: 'oot',
-    name: 'Laboratory Dive without Gold Scale',
+    name: 'Laboratory Dive without Golden Scale',
     tooltip: 'Using Iron Boots and Hookshot, it is possible to obtain this check without the Golden Scale.',
     linkVideo: 'https://www.youtube.com/watch?v=7ihH-wBP0PM&ab_channel=dotzo',
   },
@@ -164,7 +164,7 @@ export const TRICKS: Tricks = {
   OOT_PASS_COLLISION: {
     game: 'oot',
     name: 'Pass through Visible One-Way Collisions',
-    tooltip: "Some walls and gates, despite their appearance, only have collision on one side. Turning this on may expect you to know of these and walk through them. Some examples are the Kakariko Gate as child and the awning behind Impa's House.",
+    tooltip: "Some walls and gates, despite their appearance, only have collision on one side. Turning this on may expect you to know of these and walk through them. Some examples are the Kakariko Gate as Child and the awning behind Impa's House.",
     linkVideo: 'https://www.youtube.com/watch?v=OnnNUZVW8Gw&ab_channel=StoneeBadLuck',
   },
   OOT_DMT_RED_ROCK_GS: {
@@ -176,13 +176,13 @@ export const TRICKS: Tricks = {
   OOT_DEAD_HAND_STICKS: {
     game: 'oot',
     name: 'Child Dead Hand without Kokiri Sword',
-    tooltip: 'Fighting Dead Hand as child with Deku Sticks requires all 10 if you only use slashes. This trick removes the mercy of fighting it with a sword.',
+    tooltip: 'Fighting Dead Hand as Child with Deku Sticks requires all 10 if you only use slashes. This trick removes the mercy of fighting it with a sword.',
     linkVideo: 'https://www.youtube.com/watch?v=gROY5Y66xeA&ab_channel=dotzo',
   },
   OOT_BFA_MUDWALLS: {
     game: 'oot',
     name: 'Break Mud Walls with Blue Fire Arrows',
-    tooltip: 'Blue Fire has the ability to break mudwalls. Turning this on will allow the Blue Fire Arrows to be logical for breaking these.',
+    tooltip: 'Blue Fire has the ability to break mud walls. Turning this on will allow the Blue Fire Arrows to be logical for breaking these.',
     linkVideo: 'https://www.youtube.com/watch?v=XXAFs1cfRrc&ab_channel=ThatWelshKaren',
   },
   OOT_JABU_BOSS_HOVER: {
@@ -198,7 +198,7 @@ export const TRICKS: Tricks = {
   OOT_VALLEY_GATE_HOVER: {
     game: 'oot',
     name: 'Reach Gerudo Fortress as Child using Hover Boots',
-    tooltip: 'Using Ageless Hover Boots, it is possible to backwalk off the small pegs near the gate then backflip over it.',
+    tooltip: 'Using Ageless Hover Boots, it is possible to backwalk off the small pegs near the gate, then backflip over it.',
   },
   OOT_MQ_ICE_SCARE_NOTHING: {
     game: 'oot',
@@ -234,16 +234,16 @@ export const TRICKS: Tricks = {
   OOT_JABU_BOSS_HIGH_SWITCH: {
     game: 'oot',
     name: 'Jabu Boss Switch without Boomerang or Climb Anywhere',
-    tooltip: "It is possible to hit the switch before Jabu-Jabu's boss using Bow, Slingshot, Longshot, Bombchu, and Hover Boots + Bombs. Having Climb Anywhere logical makes this trickless.",
+    tooltip: "It is possible to hit the switch before Jabu-Jabu's boss using Bow, Slingshot, Longshot, Bombchu or Hover Boots + Bombs. Having Climb Anywhere logical makes this trickless.",
   },
   OOT_WATER_REVERSE_RIVER: {
     game: 'oot',
     name: 'Water Temple Reverse River with Hookshot Anywhere',
-    tooltip: 'Using Hookshot Anywhere, Link can hook up from the Dragon Statue room, and then hook through the gate blocking the river before it has loaded.',
+    tooltip: 'Using Hookshot Anywhere, Link can hookshot up from the Dragon Statue room, and then hookshot through the gate blocking the river before it has loaded.',
   },
   OOT_WATER_PIT_GS_CHU: {
     game: 'oot',
-    name: 'Water Temple Large Pit GS with Bombchu',
+    name: 'Water Temple Large Pit GS with Bombchu and Climb Anywhere',
     tooltip: 'It is possible to kill the Gold Skulltula using a Bombchu with a precise angle and timing. This is only relevant if Climb Anywhere is logical.',
   },
   OOT_SHADOW_BOAT_EARLY: {
@@ -265,7 +265,7 @@ export const TRICKS: Tricks = {
   OOT_DC_BOULDER: {
     game: 'oot',
     name: "Skip Dodongo Cavern's Boulder using Ageless Hookshot Anywhere",
-    tooltip: 'Using Ageless Hookshot Anywhere, child can hookshot through the small hole at the bottom right next to the soft soil. Doing this can get you past the boulder without blowing it up.',
+    tooltip: 'Using Ageless Hookshot Anywhere, Child can hookshot through the small hole at the bottom right next to the soft soil. Doing this can get you past the boulder without blowing it up.',
   },
   OOT_LAKE_SHORTCUT: {
     game: 'oot',
@@ -274,44 +274,43 @@ export const TRICKS: Tricks = {
   },
   OOT_JJB_BOXLESS: {
     game: 'oot',
-    name: 'Access Jabu-Jabu pre-boss without the box',
-    tooltip: 'By doing a jump slash and precise roll, it is possible to get through the door without the box.',
+    name: 'Access Jabu-Jabu Pre-Boss without a box',
+    tooltip: 'By doing a jump slash and a precise roll, it is possible to get through the door without a box.',
   },
   OOT_TENT_CHILD: {
     game: 'oot',
     name: 'Enter the Gerudo Valley Tent as Child',
-    tooltip: "The Gerudo Valley Tent is only present as Adult, however it's entrance is still there as child. Turning this on may expect the player to know where it is and use it for progress in Interior ER.",
+    tooltip: "The Gerudo Valley Tent is only present as Adult, however its entrance is still there as Child. Turning this on may expect the player to know where it is and use it for progress in Interior ER.",
   },
   OOT_WELL_ADULT_TT: {
     game: 'oot',
     name: 'Enter Bottom of the Well as Adult with Time Travel',
-    tooltip: 'Intended for use with Boss ER and Full Dungeon ER. This trick will allow an Adult Boss to be placed in an MM Dungeon in this location.',
+    tooltip: 'Entering the drained well as Child and turning Adult behind the blockage grants access to that entrance as Adult. Useful in Entrance Randomizer.',
   },
   OOT_ADULT_GALLERY_TT: {
     game: 'oot',
     name: 'Enter Adult Shooting Gallery as Child with Time Travel',
-    tooltip:
-      'Inteded for use with Interior ER. This will allow interiors where you cannot age swap with Child-only checks to be placed in this location.',
+    tooltip:'It is possible to turn from Child to Adult inside of the construction area, get close to the loading zone, and turn back to Child to enter the loading zone inside of the brick stack. Useful in Entrance Randomizer.',
   },
   OOT_GTG_CHILD_TT: {
     game: 'oot',
     name: 'Enter Gerudo Training Grounds as Child with Time Travel',
-    tooltip: 'Intended for use with Boss ER and Full Dungeon ER. This trick will allow a Child Boss to be placed in an MM Dungeon in this location.',
+    tooltip: 'Turning from Adult to Child inside of the doorframe puts you behind the gates, granting access to that entrance as Child. Useful in Entrance Randomizer.',
   },
   OOT_REVERSE_DAMPE: {
     game: 'oot',
-    name: "Navigate Dampe's Grave in Reverse",
-    tooltip: "Using Climb Anywhere or Hookshot Anywhere and Age Swap, it is possible to get past the final door of Dampe's Grave and then navigate to the entrance in complete darkness.",
+    name: "Navigate Dampé's Grave in Reverse",
+    tooltip: "Using Climb Anywhere or Hookshot Anywhere and Age Swap, it is possible to get past the final door of Dampé's Grave and then navigate to the entrance in complete darkness.",
   },
   OOT_GANON_FAIRY_TT: {
     game: 'oot',
     name: "Ganon's Great Fairy with Age Swap and without Gold Gauntlets",
-    tooltip: 'By using Age Swap in the child Great Fairy entrance, Adult can walk out of his entrance and then walk right back in to access his Great Fairy entrance.',
+    tooltip: 'Entering the Hyrule Castle Great Fairy entrance as Child, age swapping there, walking out as Adult and then walking right back in grants access to the Outside Ganon\'s Castle Great Fairy entrance.',
   },
   OOT_GANON_CASTLE_ENTRY: {
     game: 'oot',
     name: "Enter Ganon's Castle with Longshot Anywhere",
-    tooltip: 'While easy, doing this can bypass a huge chunk of potential logic.',
+    tooltip: 'While easy, doing this can bypass a huge chunk of potential logic if this trick is not enabled.',
   },
   OOT_SHADOW_TEMPLE_STICKS: {
     game: 'oot',
@@ -321,7 +320,7 @@ export const TRICKS: Tricks = {
   },
   OOT_WATER_GOLD_SCALE: {
     game: 'oot',
-    name: 'Enter Water Temple with Gold Scale and Longshot',
+    name: 'Enter Water Temple with Golden Scale and Longshot',
     tooltip: 'It is possible to enter Water Temple without Iron Boots by using the Golden Scale.',
   },
   OOT_COURTYARD_FROM_GANON: {
@@ -331,7 +330,7 @@ export const TRICKS: Tricks = {
   },
   OOT_HIVE_BOMBCHU: {
     game: 'oot',
-    name: "Destroy Beehives using Bombchu (OOT)",
+    name: "Destroy Beehives using Bombchu (OoT)",
     tooltip: "Use some careful timing with a Bombchu to blow up the beehives across Hyrule.",
   },
   OOT_DEKU_MQ_WATER_ROOM_SPIKE_ROLL: {
@@ -342,12 +341,12 @@ export const TRICKS: Tricks = {
   OOT_BOTW_MQ_BACKFLIP: {
     game: 'oot',
     name: "Backflip/Sidehop Over Gap to Reach BotW MQ's Main Room's Center",
-    tooltip: "Makes reachable the center of the main room without Zelda's Lullaby or Hover Boots.",
+    tooltip: "Makes the center of the main room reachable without Zelda's Lullaby or Hover Boots by entering the left cage and backflipping/sidehopping over the invisible gap",
   },
   MM_LENS: {
     game: 'mm',
     name: 'Fewer Lens Requirements (MM)',
-    tooltip: 'Makes Lens of Truth not a required item for most checks, excluding Shiro (stone mask check) and climbing the wall to Darmani',
+    tooltip: 'Makes Lens of Truth not a required item for most checks, excluding Shiro (Stone Mask check) and climbing the wall to Darmani',
   },
   MM_TUNICS: {
     game: 'mm',
@@ -357,7 +356,7 @@ export const TRICKS: Tricks = {
   MM_PALACE_BEAN_SKIP: {
     game: 'mm',
     name: 'Skip Planting Beans in Deku Palace',
-    tooltip: 'Jump onto on of the doorframes to skip planting the beans, removing bottle for this check',
+    tooltip: 'Backflip onto the doorframe in the left side of Deku Palace to skip planting the beans, removing the bottle requirement for the Sonata check',
     linkVideo: 'https://www.youtube.com/watch?v=sL30HLF9tAQ&ab_channel=PushyMisumi',
   },
   MM_DARMANI_WALL: {
@@ -369,49 +368,49 @@ export const TRICKS: Tricks = {
   MM_NO_SEAHORSE: {
     game: 'mm',
     name: 'Pinnacle Rock without Seahorse',
-    tooltip: 'Go to Pinnacle Rock blind. The Signs are your markers for turns.',
+    tooltip: 'Cross Pinnacle Rock blind. The signs are your markers for turns.',
     linkVideo: 'https://www.youtube.com/watch?v=Ye7lu1kSxpQ&ab_channel=Rahylia',
   },
   MM_ZORA_HALL_HUMAN: {
     game: 'mm',
     name: 'Swim to Zora Hall as Human',
-    tooltip: "Swim around the back of Zora Hall to get there without Zora' mask",
+    tooltip: "Swim around Zora Hall to reach the back without Zora Mask",
     linkVideo: 'https://www.youtube.com/watch?v=j4GiWM0xgtA&ab_channel=Rahylia',
   },
   MM_ICELESS_IKANA: {
     game: 'mm',
     name: 'Climb Ikana Canyon without Ice Arrows',
-    tooltip: 'With a precise hookshot postition, you can hit the first tree instead of using the ice arrows to get closer',
+    tooltip: 'With a precise Hookshot position, you can hit the first tree directly from the riverside, removing the Ice Arrow requirement',
     linkVideo: 'https://www.youtube.com/watch?v=VtMx8XIE0tA&ab_channel=yogamoanyo',
   },
   MM_ONE_MASK_STONE_TOWER: {
     game: 'mm',
     name: 'Climb Stone Tower with One Mask',
-    tooltip: 'Play the Elegy of Emptiness on a specific block to climb a certain portion of Stone Tower',
+    tooltip: 'Playing the Elegy of Emptiness while standing on a block to move with it, along with other clever Elegy of Emptiness usage, allows you to climb Stone Tower using just two Elegy statues',
     linkVideo: 'https://www.youtube.com/watch?v=I3xLE1X9Iiw&t=3s&ab_channel=dodo',
   },
   MM_ISTT_EYEGORE: {
     game: 'mm',
-    name: 'Inverted Stone Tower Temple Eyegore Skips',
-    tooltip: 'Using either hookshot and light arrows, or bombs for a recoil jump, skip portions of the dungeon using the central bridge with an Eyegore on it',
+    name: 'Inverted Stone Tower Temple Early Eyegore',
+    tooltip: 'Using either Hookshot and Light Arrows, or bombs for a Recoil Flip, you can access the central bridge with the Eyegore on it early, skipping a portion of the dungeon',
     linkVideo: 'https://www.youtube.com/watch?v=PxUhL6pombo&list=PLJoiLTDPjgenwpASzbu07cLnUSGZcIUnB&index=52&ab_channel=dodo',
   },
   MM_SCT_NOTHING: {
     game: 'mm',
     name: 'South Clock Town Chest with Nothing',
-    tooltip: 'Climb the roof with a precise jump to access the South Clock town Chest',
+    tooltip: 'Climb the roof with a precise jump to access the South Clock Town Chest',
     linkVideo: 'https://www.youtube.com/watch?v=8_tjO86vRsY&ab_channel=PushyMisumi',
   },
   MM_GORON_BOMB_JUMP: {
     game: 'mm',
     name: 'Bomb Jump Fences as Goron',
-    tooltip: 'Using bombs or a keg, use the Goron Pound to leap into the air and get damaged by the explosion to hop over fences',
+    tooltip: 'Place down bombs or a Powder Keg, then use the Goron Pound to leap into the air and get damaged mid-air by the explosion to hop over fences',
     linkVideo: 'https://www.youtube.com/watch?v=lLMT2-wNs9w&ab_channel=KokiriKid07',
   },
   MM_BOMBER_GUESS: {
     game: 'mm',
-    name: 'Guess Bomber Code',
-    tooltip: 'Guess the Bomber Code for Astral Observatory.  There are 120 Combinations. (The Video Link is a backflip over him)',
+    name: 'Guess Bombers\' Code',
+    tooltip: 'Guess the Bombers\' Code for Astral Observatory from 120 possible combinations. Alternatively, you can backflip over the bomber kid guarding the entrance',
     linkVideo: 'https://www.youtube.com/watch?v=W6DhLXzJn0A&ab_channel=Tyler%2706',
   },
   MM_CAPTAIN_SKIP: {
@@ -422,23 +421,23 @@ export const TRICKS: Tricks = {
   MM_ISTT_ENTRY_JUMP: {
     game: 'mm',
     name: 'Inverted Stone Tower Temple Long Jump to Death Armos',
-    tooltip: 'Using a precise bomb long jump, you can make it to the switch on the left side of the room, normally blocked by the wall',
+    tooltip: 'Using a precise bomb long jump, you can make it to the switch on the left side of the room',
     linkVideo: 'https://www.youtube.com/watch?v=UAG9jbjKwek&ab_channel=Gigopler',
   },
   MM_HARD_HOOKSHOT: {
     game: 'mm',
-    name: 'Precise Hookshot Usage',
-    tooltip: 'Using the short hookshot gives you logical access to:<br>- the Deku Palace Bean Grotto chest<br>- the Road to Ikana chest and tree',
+    name: 'Precise Short Hookshot Usage',
+    tooltip: 'With this trick enabled, using the Short Hookshot gives you logical access to the Deku Palace Bean Grotto chest, the Road to Ikana chest and Ikana Canyon through the Road to Ikana tree',
   },
   MM_PFI_BOAT_HOOK: {
     game: 'mm',
-    name: 'Enter Pirate Fortress Interior using Hookshot from the Boats',
-    tooltip: 'From the boats, you can make a precise hookshot to a barrel',
+    name: 'Enter Pirates\' Fortress Interior using Hookshot from the Boats',
+    tooltip: 'From the boats, you can make a precise shot to the barrels in front of the interior entrance',
   },
   MM_PALACE_GUARD_SKIP: {
     game: 'mm',
     name: 'Backflip over Deku Palace Guards',
-    tooltip: 'With a precise backflip on the fence, jump over the guards as human link',
+    tooltip: 'With a precise backflip on the fence, jump over the guards as Human Link',
     linkVideo: 'https://www.youtube.com/watch?v=-4F9lzES7tM&ab_channel=Pokemongenius88',
   },
   MM_SHT_HOT_WATER: {
@@ -449,24 +448,24 @@ export const TRICKS: Tricks = {
   MM_SHT_STICKS_RUN: {
     game: 'mm',
     name: 'Access SHT Pillar Fireless with Precise Stick Run',
-    tooltip: 'With a precise path, light the three torches.',
+    tooltip: 'With a precise path, light the three torches.', //Clearer description?
   },
   MM_SHT_PILLARLESS: {
     game: 'mm',
     name: 'Snowhead Temple Skip Raising Pillar',
-    tooltip: 'Destroy the snowballs with fire arrows or bombs and then jump down.  A precise jump slash may help getting onto the platform.',
+    tooltip: 'Destroy the snowballs with Fire Arrows or bombs and then jump down. A precise jump slash may help getting onto the platform.',
     linkVideo: 'https://youtube.com/clip/UgkxwCrliqwRiCbljfpozhmsnlzVwSUaAI0N',
   },
   MM_SHT_PILLAR_ROOM_HOOKSHOT: {
     game: 'mm',
     name: 'Snowhead Temple Hookshot Up Pillar Room',
-    tooltip: 'From the ground floor of pillar room, use a hookshot to kill the freezards and then climb using the chest that spawns.',
+    tooltip: 'From the ground floor of pillar room, use a Hookshot to kill the freezards and then climb using the chest that spawns.',
     linkVideo: 'https://youtu.be/4WVOnjC7xdE',
   },
   MM_KEG_EXPLOSIVES: {
     game: 'mm',
     name: 'Use Powder Kegs as Explosives',
-    tooltip: 'Allows Powder Keg to be an alternative to bombs in logic',
+    tooltip: 'Allows Powder Kegs to be an alternative to bombs in logic',
   },
   MM_DOG_RACE_CHEST_NOTHING: {
     game: 'mm',
@@ -482,24 +481,24 @@ export const TRICKS: Tricks = {
   MM_SOUTHERN_SWAMP_SCRUB_HP_GORON: {
     game: 'mm',
     name: 'Southern Swamp Scrub HP as Goron',
-    tooltip: "Use Goron's ground pound in front of the Tourist Center door to clip through the roof and reach the heart piece",
+    tooltip: "Use Goron's ground pound in front of the Tourist Center door to land on the roof and reach the heart piece",
     linkVideo: 'https://www.youtube.com/watch?v=HvH5NaTsf5w&list=PLuteuW9RqeG0NfhzoiZlJ1HQM2BdHftzg&index=5&ab_channel=Pokemongenius88',
   },
   MM_ZORA_HALL_SCRUB_HP_NO_DEKU: {
     game: 'mm',
     name: 'Zora Hall Scrub HP without Deku',
-    tooltip: 'As either Goron or Zora Link, jump up to the heart piece.  Linked playlist has both versions.',
+    tooltip: 'As either Goron or Zora Link, jump up to the heart piece. Linked playlist has both versions.',
     linkVideo: 'https://www.youtube.com/playlist?list=PL7AtrmSRvw6JxohRTRK61ZGSvuIL5rq0w',
   },
   MM_ZORA_HALL_DOORS: {
     game: 'mm',
     name: 'Access the doors in Zora Hall using Short Hookshot Anywhere',
-    tooltip: 'Using Hookshot Anywhere, it is possible to hook behind the doors and open the doors behind them. It is somewhat precise but works with all doors.',
+    tooltip: 'Using Hookshot Anywhere, it is possible to hookshot behind the doors and open the doors behind them. It is somewhat precise but works with all doors.', //How does this trick work exactly?
   },
   MM_IKANA_ROOF_PARKOUR: {
     game: 'mm',
     name: "Jump from Ikana Castle's Roof Interior to Exterior",
-    tooltip: 'Jump off of a piece of rubble to the slope on the wall, and jump outside the fenced wall.  Walk around the edge to get to the other side.',
+    tooltip: 'Jump off of a piece of rubble to a sloped wall, walk up, and jump across the block to the outside of the fence. Walk around the edge to get to the other side.',
     linkVideo: 'https://www.youtube.com/watch?v=9af_q8oYBhA&t=1s',
   },
   MM_IKANA_PILLAR_ENTRANCE_FLOAT: {
@@ -515,7 +514,7 @@ export const TRICKS: Tricks = {
   MM_POST_OFFICE_GAME: {
     game: 'mm',
     name: 'Post Office Timing Game without Bunny Hood',
-    tooltip: 'Get good at counting to 10',
+    tooltip: 'Obtain the reward without an on-screen timer to help you',
     linkVideo: 'https://www.youtube.com/watch?v=bAlGLPkp8go&ab_channel=ZZtheCat2',
   },
   MM_WELL_HSW: {
@@ -526,7 +525,7 @@ export const TRICKS: Tricks = {
   MM_ISTT_CHUCHU_LESS: {
     game: 'mm',
     name: 'ISTT Block Room without Chuchu Jellies',
-    tooltip: 'Normally the room contains Chuchu Jellies to restock your arrows and magic. With this trick on, logic can expect to do this room without the Soul of Chuchus.',
+    tooltip: 'Normally the room contains Chuchu Jellies to restock your arrows and magic. With this trick on, logic can expect you to do this room without the Soul of Chuchus.',
   },
   MM_GBT_WATERWHEEL_GORON: {
     game: 'mm',
@@ -542,7 +541,7 @@ export const TRICKS: Tricks = {
   MM_OOB_MOVEMENT: {
     game: 'mm',
     name: 'Walk Along Surfaces Out of Bounds',
-    tooltip: 'In certain situations, it is required to walk on surfaces that are unable to be reached normally.',
+    tooltip: 'In certain situations, it is required to walk on surfaces that are unable to be reached normally.', //Examples could help
   },
   MM_ST_UPDRAFTS: {
     game: 'mm',
@@ -552,32 +551,32 @@ export const TRICKS: Tricks = {
   MM_ESCAPE_CAGE: {
     game: 'mm',
     name: 'Escape the Monkey Cage with Hookshot Anywhere',
-    tooltip: 'For Interior ER, it is possible to hook over the fence and land in a spot where Deku Mask can then be used to leave out the front entrance.',
+    tooltip: 'For Interior ER, it is possible to hookshot over the fence and land in a spot where Deku Mask can then be used to leave out the front entrance.',
   },
   MM_GBT_FAIRY2_HOOK: {
     game: 'mm',
     name: 'GBT First Underwater Fairy with Short Hookshot Anywhere',
-    tooltip: 'The first Stray Fairy in a bubble can be obtained with a precise angle.',
+    tooltip: 'The first Stray Fairy in a bubble can be obtained with a precise Hookshot angle.',
   },
   MM_GBT_CENTRAL_GEYSER: {
     game: 'mm',
     name: 'GBT Central Room without Zora using Fire & Ice Arrows or an OoT Magic Spell',
-    tooltip: 'Using Fire and Ice Arrows or an OOT Spell, it is possible to sink down during the cutscene, then swim into one of the tunnels.',
+    tooltip: 'Using Fire and Ice Arrows on the water stream above the ladder or an OoT Spell while on the spinning platform, it is possible to sink down during the cutscene, then swim into one of the tunnels.',
   },
   MM_BANK_ONE_WALLET: {
     game: 'mm',
     name: 'Bank Rewards Require One Less Wallet',
-    tooltip: 'The 500-Rupee item will not require a wallet, and the 1000-rupee item will require one wallet.',
+    tooltip: 'The 500-Rupee item reward will only require the Child Wallet, and the 1000-rupee item reward will require the Adult Wallet.',
   },
   MM_BANK_NO_WALLET: {
     game: 'mm',
-    name: 'Bank Rewards Require No Wallets',
-    tooltip: 'All bank items will not require a wallet.',
+    name: 'Bank Rewards Require No Extra Wallets',
+    tooltip: 'All bank rewards will only require the Child Wallet.',
   },
   MM_CLOCK_TOWER_WAIT: {
     game: 'mm',
     name: 'Wait for the Clock Tower to Open When Shuffled',
-    tooltip: 'With this enabled, it may be expected to wait for the Clock Tower to open without a way to quickly advance time.',
+    tooltip: 'With this trick enabled and the Clock Tower entrance shuffled, it may be expected to wait for the Clock Tower to open without a way to quickly advance time.',
   },
   MM_WFT_RUPEES_ICE: {
     game: 'mm',
@@ -587,16 +586,16 @@ export const TRICKS: Tricks = {
   MM_ISTT_RUPEES_GORON: {
     game: 'mm',
     name: 'Collect the Floating Rupees in ISTT as Goron',
-    tooltip: 'In the room before Twinmold, Goron can collect the rupees by rolling over them.',
+    tooltip: 'In the room before Twinmold, Goron can collect the rupees by rolling on the platform over them.',
   },
   MM_BOMBER_BACKFLIP: {
     game: 'mm',
     name: 'Backflip over the Bomber in East Clock Town',
-    tooltip: 'Just backflip over the kid.',
+    tooltip: 'Just backflip over the kid.', // Is Guess Bombers' Code not logically equivalent to this?
   },
   MM_NCT_TINGLE: {
     game: 'mm',
-    name: 'Jump slash Tingle in North Clock Town',
+    name: 'Jump Slash Tingle in North Clock Town',
     tooltip: "Jump off the tree and jump slash Tingle's balloon. Sticks will not work.",
   },
   MM_GBT_FIRELESS: {
@@ -606,18 +605,18 @@ export const TRICKS: Tricks = {
   },
   MM_IGOS_DINS: {
     game: 'mm',
-    name: "Burn Igos' curtains with Din's Fire",
-    tooltip: "Igos' curtains can be burned by standing at the top of the stairs next to his throne.",
+    name: "Burn Igos' curtain with Din's Fire",
+    tooltip: "Igos' left curtain can be burned by standing at the top of the stairs next to his throne.",
   },
   MM_BIO_BABA_CHU: {
     game: 'mm',
     name: 'Destroy the Bio Baba Grotto Hives with a Bombchu',
-    tooltip: 'The hives in this grotto can be destroyed with a precise bombchu toss.',
+    tooltip: 'The hives in this grotto can be destroyed with a precise bombchu placement.',
   },
   MM_BIO_BABA_LUCK: {
     game: 'mm',
     name: 'Bio Baba Grotto Lilypad Luck',
-    tooltip: 'Hope the item lands on the lilypads.',
+    tooltip: 'If the item happens to land on one of the lilypads, you can get it without Zora Mask or Iron Boots.',
   },
   MM_WF_SHRINE_HOVERS: {
     game: 'mm',
@@ -632,17 +631,17 @@ export const TRICKS: Tricks = {
   MM_SOARING_ZORA: {
     game: 'mm',
     name: 'Zora Long Jump to the Soaring Tablet',
-    tooltip: 'The Soaring Tablet can be long jumped to as Zora from the back poisoned swamp or from the Woodfall entrance.',
+    tooltip: 'The Soaring Tablet can be long jumped to as Zora from the giant flower in the back of Poison Swamp or from the Woodfall entrance.',
   },
   MM_SOARING_HOVERS: {
     game: 'mm',
     name: 'Jump Slash or Damage Boost to the Soaring Tablet with Hover Boots and Bunny Hood',
-    tooltip: 'Using Bunny Hood for extra speed, Hover Boots can be used to reach the Soaring Tablet with a tight jump slash or damage boost with explosives.',
+    tooltip: 'Using Bunny Hood for extra speed, Hover Boots can be used to reach the Soaring Tablet with a tight jump slash or a damage boost with explosives.',
   },
   MM_LULLABY_SKIP_IRONS: {
     game: 'mm',
     name: 'Skip playing Goron Lullaby by using Iron Boots',
-    tooltip: 'By combining Iron Boots to not be blown by wind and Goron to roll up the slope, Goron Lullaby can be skipped.',
+    tooltip: 'By combining Iron Boots to not be blown away by the wind and Goron to roll up the slope, Goron Lullaby can be skipped.',
   },
   MM_PATH_SNOWHEAD_HOVERS: {
     game: 'mm',
@@ -652,16 +651,16 @@ export const TRICKS: Tricks = {
   MM_GBT_WATERWHEEL_HOVERS: {
     game: 'mm',
     name: 'Cross GBT Waterwheel Room using Hover Boots',
-    tooltip: 'Similar to using Goron, Hover Boots can be used to get on the water wheel and then to the central room.',
+    tooltip: 'Similar to using Goron, Hover Boots can be used to get on the water wheel and then reach the central room.',
   },
   MM_GBT_CENTER_POT_IRONS: {
     game: 'mm',
     name: 'Great Bay Temple Center Underwater Pot using only Iron Boots',
-    tooltip: 'The pot can be broken by rolling into it and the Stray Fairy collected.',
+    tooltip: 'The pot can be broken by rolling into it, allowing you to collect the Stray Fairy.',
   },
   MM_GBT_RED1_HOVERS: {
     game: 'mm',
-    name: 'Reach the first red pipe in GBT using Hover Boots, Bunny Hood, and a Jump Slash',
+    name: 'Reach the First Red Turnkey in GBT using Hover Boots, Bunny Hood, and a Jump Slash',
     tooltip: 'The red turnkey in front of Wart can be reached with a precise jump slash after the hover duration, using Bunny Hood for extra speed.',
   },
   MM_GBT_GREEN2_UPPER_HOVERS: {
@@ -672,17 +671,17 @@ export const TRICKS: Tricks = {
   MM_GYORG_IRONS: {
     game: 'mm',
     name: 'Fight Gyorg as Human using Iron Boots and Hookshot',
-    tooltip: 'Gyorg can be damaged with Hookshot. Turning this on will enable the fight in logic with Iron Boots.',
+    tooltip: 'Gyorg can be damaged with Hookshot. Turning this trick on will enable the fight in logic with Iron Boots and Hookshot.',
   },
   MM_STT_LAVA_BLOCK_HOVERS: {
     game: 'mm',
     name: 'Stone Tower Temple Map Chest using Hover Boots',
-    tooltip: 'After hooking to the chest near the entrance of the room, one can then hover on top of the sun block.',
+    tooltip: 'After using the Hookshot to reach the chest on the high platform in the lava room, one can then use the Hover Boots to land on top of the sun block.',
   },
   MM_ISTT_ENTRY_HOVER: {
     game: 'mm',
     name: 'Inverted Stone Tower Temple Death Armos using Hover Boots and Bunny Hood',
-    tooltip: 'The Death Armos can be reached by hovering and then sidehopping, using Bunny Hood for extra speed.',
+    tooltip: 'The switch can be reached by using the Hover Boots and then sidehopping to grab the ledge, using Bunny Hood for extra speed.',
   },
   MM_GYORG_POTS_DIVE: {
     game: 'mm',
@@ -702,26 +701,27 @@ export const TRICKS: Tricks = {
   MM_STAGE_LIGHTS_DIN: {
     game: 'mm',
     name: "Light the Zora Hall Stage Lights using Din's Fire, Bow, and Hookshot",
-    tooltip: "The item can be obtained without Fire Arrows by first hooking to either torch, using Din's Fire, then shooting an arrow to the other torch.",
+    tooltip: "The item can be obtained without Fire Arrows by first reaching either torch with the hookshot, using Din's Fire, then shooting an arrow to the other torch.",
   },
   MM_RANCH_FARORE: {
     game: 'mm',
     name: "Romani's Ranch locations using Farore's Wind and Time Reset",
-    tooltip: "Turning this on will let logic allow placing Farore's Wind then resetting time to obtain these items.",
+    tooltip: "It is possible to place Farore's Wind in Romani Ranch on Day 3, reset time and warp back to Romani Ranch to obtain the Day 1 and 2 checks without the Powder Keg",
   },
   MM_EVAN_FARORE: {
     game: 'mm',
     name: "Evan's Piece of Heart using Farore's Wind and Time Reset",
-    tooltip: "Turning this on will let logic allow placing Farore's Wind then resetting time to obtain this item.",
+    tooltip: "After beating Great Bay Temple, the door to Evan's Room will no longer be blocked. Use Farore's Wind inside the empty room, reset time so that Evan reappears in his room, and warp back.",
   },
   MM_KEG_TRIAL_HEATLESS: {
     game: 'mm',
     name: 'Powder Keg Trial without Thawing Ice using Hookshot Anywhere',
+    tooltip: "With Hookshot Anywhere, it is possible to hookshot through the little gap in the left bottom corner.",
   },
   MM_STT_LAVA_SWITCH_HAMMER: {
     game: 'mm',
     name: 'Stone Tower Temple Lava Room switch without Goron',
-    tooltip: "The switch in the lava room with updrafts can be done without Goron by using Megaton Hammer, Iron Boots, and Bunny Hood. It has pretty tight timing.",
+    tooltip: "The switch in the lava room with updrafts can be pressed without Goron by using Megaton Hammer, Iron Boots, and Bunny Hood. It has pretty tight timing.",
     linkVideo: 'https://www.youtube.com/watch?v=_fTKOvkVTTA',
   },
   GLITCH_OOT_EQUIP_SWAP: {
